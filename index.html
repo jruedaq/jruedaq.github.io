@@ -3,682 +3,1053 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juan David Rueda — Dev & Cloud Engineer</title>
-  <meta name="description" content="Software Developer & Cloud Infrastructure Engineer from Bogotá, Colombia. PHP/Laravel, Flutter, multi-cloud Azure/AWS/DigitalOcean.">
-  <meta property="og:title" content="Juan David Rueda Quiroga — Software Developer">
-  <meta property="og:description" content="Software developer and cloud engineer from Bogotá, Colombia: PHP/Laravel platforms, Flutter apps and multi-cloud infrastructure on Azure, AWS and DigitalOcean.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://juandavid.dev/">
+  <title>Juan David Rueda Quiroga · Ingeniero de Sistemas</title>
+  <meta name="description" content="Ingeniero de Sistemas en Bogotá. Plataformas web con Laravel, apps con Flutter e infraestructura en Azure, AWS y DigitalOcean, en producción desde 2019.">
+  <meta name="author" content="Juan David Rueda Quiroga">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://juandavid.dev/">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#090f0c">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f8f6">
+
+  <meta property="og:type" content="profile">
   <meta property="og:site_name" content="juandavid.dev">
+  <meta property="og:url" content="https://juandavid.dev/">
+  <meta property="og:title" content="Juan David Rueda Quiroga · Ingeniero de Sistemas">
+  <meta property="og:description" content="Plataformas web con Laravel, apps con Flutter e infraestructura en Azure, AWS y DigitalOcean que organizaciones en Colombia usan todos los días.">
   <meta property="og:locale" content="es_CO">
   <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:image" content="https://juandavid.dev/og.png">
+  <meta property="og:image" content="https://juandavid.dev/og.png?v=20261026">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
-  <meta property="og:image:alt" content="Juan David Rueda Quiroga — Backend Developer · Flutter · Cloud & DevOps">
+  <meta property="og:image:alt" content="Juan David Rueda Quiroga, Ingeniero de Sistemas, junto al mapa de su infraestructura en Azure, AWS y DigitalOcean">
+  <meta property="profile:first_name" content="Juan David">
+  <meta property="profile:last_name" content="Rueda Quiroga">
+  <meta property="profile:username" content="jruedaq">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Juan David Rueda Quiroga — Software Developer">
-  <meta name="twitter:description" content="Software developer and cloud engineer from Bogotá, Colombia: PHP/Laravel platforms, Flutter apps and multi-cloud infrastructure on Azure, AWS and DigitalOcean.">
-  <meta name="twitter:image" content="https://juandavid.dev/og.png">
-  <link rel="canonical" href="https://juandavid.dev/">
-  <meta name="theme-color" content="#080c0d">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080c0d'/%3E%3Crect width='32' height='32' rx='7' fill='none' stroke='%2300e5a0' stroke-width='1.5' opacity='0.35'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='700' fill='%2300e5a0' text-anchor='middle'%3Ejd%3C/text%3E%3C/svg%3E">
+  <meta name="twitter:title" content="Juan David Rueda Quiroga · Ingeniero de Sistemas">
+  <meta name="twitter:description" content="Plataformas web con Laravel, apps con Flutter e infraestructura en Azure, AWS y DigitalOcean que organizaciones en Colombia usan todos los días.">
+  <meta name="twitter:image" content="https://juandavid.dev/og.png?v=20261026">
+  <meta name="twitter:image:alt" content="Juan David Rueda Quiroga, Ingeniero de Sistemas, junto al mapa de su infraestructura en Azure, AWS y DigitalOcean">
+
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <script>
+    /* Tema guardado antes del primer pintado, para que no parpadee */
+    document.documentElement.classList.add('js');
+    try {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Mona+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://juandavid.dev/#website",
+        "url": "https://juandavid.dev/",
+        "name": "juandavid.dev",
+        "alternateName": "Juan David Rueda Quiroga",
+        "inLanguage": ["es", "en"],
+        "publisher": { "@id": "https://juandavid.dev/#person" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://juandavid.dev/#profilepage",
+        "url": "https://juandavid.dev/",
+        "name": "Juan David Rueda Quiroga · Ingeniero de Sistemas",
+        "inLanguage": "es",
+        "isPartOf": { "@id": "https://juandavid.dev/#website" },
+        "mainEntity": { "@id": "https://juandavid.dev/#person" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://juandavid.dev/og.png",
+          "width": 1200,
+          "height": 627
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://juandavid.dev/#person",
+        "name": "Juan David Rueda Quiroga",
+        "givenName": "Juan David",
+        "familyName": "Rueda Quiroga",
+        "url": "https://juandavid.dev/",
+        "email": "mailto:j@juandavid.dev",
+        "jobTitle": "Ingeniero de Sistemas",
+        "description": "Ingeniero de Sistemas y desarrollador de software en Bogotá: backend con PHP y Laravel, apps con Flutter e infraestructura en Azure, AWS y DigitalOcean.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bogotá",
+          "addressRegion": "Bogotá D.C.",
+          "addressCountry": "CO"
+        },
+        "nationality": { "@type": "Country", "name": "Colombia" },
+        "knowsLanguage": [
+          { "@type": "Language", "name": "Español", "alternateName": "es" },
+          { "@type": "Language", "name": "English", "alternateName": "en" }
+        ],
+        "knowsAbout": ["PHP", "Laravel", "Flutter", "Docker", "Docker Swarm", "Amazon Web Services", "Microsoft Azure", "DigitalOcean", "Linux", "MySQL", "PostgreSQL", "n8n", "REST APIs", "DevOps"],
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Escuela Tecnológica Instituto Técnico Central",
+            "alternateName": "ETITC",
+            "url": "https://www.etitc.edu.co/"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "Servicio Nacional de Aprendizaje",
+            "alternateName": "SENA",
+            "url": "https://www.sena.edu.co/"
+          }
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Ingeniero de Sistemas",
+            "credentialCategory": "degree",
+            "dateCreated": "2026-10-23",
+            "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Escuela Tecnológica Instituto Técnico Central" }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Tecnólogo Profesional en Desarrollo de Software",
+            "credentialCategory": "degree",
+            "dateCreated": "2023-11-27",
+            "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Escuela Tecnológica Instituto Técnico Central" }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Tarjeta Profesional de Tecnólogo en Desarrollo de Software",
+            "credentialCategory": "license",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "Consejo Profesional Nacional de Ingeniería",
+              "alternateName": "COPNIA",
+              "url": "https://www.copnia.gov.co/"
+            }
+          }
+        ],
+        "award": [
+          "Mención Meritoria al trabajo de grado, ETITC (2026)",
+          "Equipo ganador del hackathon de ProximaX (2020)"
+        ],
+        "worksFor": [
+          { "@type": "Organization", "name": "Corporación Volver a la Gente" },
+          { "@type": "Organization", "name": "Corporación Partners Colombia" }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/jruedaq",
+          "https://github.com/jruedaq",
+          "https://platzi.com/@jruedaq"
+        ]
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://juandavid.dev/#arcturus",
+        "name": "Arcturus Framework",
+        "description": "Framework PHP open source usado en proyectos en producción.",
+        "codeRepository": "https://github.com/Oneago/arcturus-project",
+        "programmingLanguage": "PHP",
+        "creator": { "@id": "https://juandavid.dev/#person" }
+      }
+    ]
+  }
+  </script>
 
   <style>
-    /* ── VARIABLES ── */
+    /* ── TOKENS ── */
     :root {
-      --bg:           #080c0d;
-      --surface:      #0f1416;
-      --surface-2:    #151c1f;
-      --border:       #1a2428;
-      --border-hover: #263338;
-      --text:         #d8e2e5;
-      --text-muted:   #64787d;
-      --text-dim:     #374750;
-      --accent:       #00e5a0;
-      --accent-dim:   rgba(0,229,160,.1);
-      --accent-glow:  rgba(0,229,160,.18);
-      --blue:         #38bdf8;
-      --purple:       #c084fc;
-      --orange:       #fb923c;
-      --yellow:       #fbbf24;
-      --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
-      --font-body:    'Sora', sans-serif;
-      --max-w:        960px;
-      --nav-h:        60px;
+      --bg:          oklch(0.16 0.012 165);
+      --surface:     oklch(0.195 0.013 165);
+      --surface-2:   oklch(0.235 0.014 165);
+      --line:        oklch(0.30 0.014 165);
+      --line-strong: oklch(0.42 0.016 165);
+      --ink:         oklch(0.95 0.008 165);
+      --ink-2:       oklch(0.80 0.012 165);
+      --ink-3:       oklch(0.68 0.013 165);
+      --accent:      oklch(0.80 0.12 163);
+      --accent-soft: oklch(0.80 0.12 163 / .16);
+      --on-accent:   oklch(0.18 0.03 163);
+      --lh-body:     1.7;
+
+      /* Terminal y mapa: oscuros en ambos temas (los mismos del banner y la og) */
+      --term-bg:     oklch(0.135 0.011 165);
+      --term-bar:    oklch(0.17 0.012 165);
+      --term-node:   oklch(0.19 0.013 165);
+      --term-line:   oklch(0.31 0.014 165);
+      --term-edge:   oklch(0.46 0.02 165);
+      --term-ink:    oklch(0.93 0.008 165);
+      --term-ink-2:  oklch(0.78 0.012 165);
+      --term-ink-3:  oklch(0.66 0.013 165);
+      --term-accent: oklch(0.80 0.12 163);
+
+      --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+      --font-body: 'Mona Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --max-w:     1120px;
+      --gutter:    clamp(1rem, 4vw, 2rem);
+      --nav-h:     64px;
+      --ease-out:  cubic-bezier(.25, 1, .5, 1);
+      --z-menu:    90;
+      --z-nav:     100;
+      --z-skip:    200;
+      color-scheme: dark;
+    }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) {
+        --bg:          oklch(0.975 0.006 165);
+        --surface:     oklch(0.952 0.008 165);
+        --surface-2:   oklch(0.925 0.010 165);
+        --line:        oklch(0.87 0.010 165);
+        --line-strong: oklch(0.76 0.012 165);
+        --ink:         oklch(0.22 0.015 165);
+        --ink-2:       oklch(0.38 0.014 165);
+        --ink-3:       oklch(0.50 0.013 165);
+        --accent:      oklch(0.50 0.11 162);
+        --accent-soft: oklch(0.50 0.11 162 / .14);
+        --on-accent:   oklch(0.99 0.004 165);
+        --lh-body:     1.62;
+        color-scheme: light;
+      }
+    }
+    :root[data-theme="light"] {
+      --bg:          oklch(0.975 0.006 165);
+      --surface:     oklch(0.952 0.008 165);
+      --surface-2:   oklch(0.925 0.010 165);
+      --line:        oklch(0.87 0.010 165);
+      --line-strong: oklch(0.76 0.012 165);
+      --ink:         oklch(0.22 0.015 165);
+      --ink-2:       oklch(0.38 0.014 165);
+      --ink-3:       oklch(0.50 0.013 165);
+      --accent:      oklch(0.50 0.11 162);
+      --accent-soft: oklch(0.50 0.11 162 / .14);
+      --on-accent:   oklch(0.99 0.004 165);
+      --lh-body:     1.62;
+      color-scheme: light;
     }
 
     /* ── RESET ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 1rem); -webkit-text-size-adjust: 100%; }
     body {
-      background: var(--bg); color: var(--text);
-      font-family: var(--font-body); line-height: 1.6;
-      overflow-x: hidden; -webkit-font-smoothing: antialiased;
+      background: var(--bg); color: var(--ink);
+      font-family: var(--font-body); font-size: 1.0625rem; line-height: var(--lh-body);
+      -webkit-font-smoothing: antialiased; overflow-x: clip;
+      transition: background-color .3s, color .3s;
     }
     a { color: inherit; }
+    svg { display: block; }
+    ::selection { background: var(--accent-soft); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
-    /* ── BACKGROUND ── */
-    body::before {
-      content: ''; position: fixed; inset: 0;
-      background-image:
-        radial-gradient(ellipse 60% 50% at 10% 30%, rgba(0,229,160,.05) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 40% at 90% 70%, rgba(56,189,248,.04) 0%, transparent 55%),
-        radial-gradient(circle, rgba(255,255,255,.022) 1px, transparent 1px);
-      background-size: 100% 100%, 100% 100%, 32px 32px;
-      pointer-events: none; z-index: 0;
+    .skip {
+      position: fixed; left: var(--gutter); top: -4rem; z-index: var(--z-skip);
+      padding: .55rem .9rem; border-radius: 6px;
+      background: var(--accent); color: var(--on-accent);
+      font-family: var(--font-mono); font-size: .85rem; text-decoration: none;
+      transition: top .2s var(--ease-out);
     }
+    .skip:focus { top: .75rem; }
+    .container { width: min(100% - 2 * var(--gutter), var(--max-w)); margin-inline: auto; }
+    .dot {
+      display: inline-block; flex-shrink: 0; width: .5rem; height: .5rem; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+    .ring { display: inline-block; flex-shrink: 0; width: .5rem; height: .5rem; border-radius: 50%; border: 1px solid var(--ink-3); }
+    .uline {
+      text-decoration: none;
+      background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+      transition: background-size .35s var(--ease-out), color .2s;
+    }
+    .uline:hover, .uline:focus-visible { background-size: 100% 1px; }
 
     /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h);
-      z-index: 100; display: flex; align-items: center; justify-content: space-between;
-      padding: 0 clamp(1.5rem, 5vw, 3rem);
-      background: transparent; border-bottom: 1px solid transparent;
-      transition: background .3s, border-color .3s;
+    .nav {
+      position: fixed; inset: 0 0 auto; z-index: var(--z-nav); height: var(--nav-h);
+      border-bottom: 1px solid transparent;
+      transition: background-color .3s, border-color .3s;
     }
-    nav.scrolled {
-      background: rgba(8,12,13,.92); border-bottom-color: var(--border);
-      backdrop-filter: blur(20px);
+    .nav.scrolled, .nav.menu-open {
+      background: color-mix(in oklch, var(--bg) 92%, transparent);
+      border-bottom-color: var(--line);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     }
-    .nav-logo {
-      font-family: var(--font-mono); font-weight: 600; font-size: .88rem;
-      color: var(--accent); text-decoration: none; letter-spacing: .05em;
+    .nav-inner {
+      width: min(100% - 2 * var(--gutter), var(--max-w)); height: 100%; margin-inline: auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
     }
-    .nav-logo span { color: var(--text-muted); }
-    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
-    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-    .nav-links a {
-      font-family: var(--font-mono); font-size: .75rem;
-      color: var(--text-muted); text-decoration: none;
-      letter-spacing: .03em; transition: color .2s;
+    .brand {
+      display: inline-flex; align-items: center; gap: .65rem;
+      font-family: var(--font-mono); font-size: .9rem; font-weight: 600;
+      color: var(--ink); text-decoration: none;
     }
-    .nav-links a:hover { color: var(--accent); }
-    .nav-cta {
-      color: var(--accent) !important;
-      border: 1px solid rgba(0,229,160,.4);
-      padding: .32rem .85rem; border-radius: 3px;
-      transition: background .2s, color .2s !important;
+    .brand-mark {
+      display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 7px;
+      border: 1px solid color-mix(in oklch, var(--accent) 60%, transparent);
+      color: var(--accent); font-size: .8rem; font-weight: 700; letter-spacing: -.02em;
+      transition: background-color .25s, color .25s;
     }
-    .nav-cta:hover { background: var(--accent); color: var(--bg) !important; }
-
-    /* Language toggle */
-    .lang-toggle {
-      display: flex; align-items: center; gap: .15rem;
-      font-family: var(--font-mono); font-size: .72rem;
+    .brand:hover .brand-mark { background: var(--accent); color: var(--on-accent); }
+    .brand-name span { color: var(--ink-3); font-weight: 500; }
+    .nav-right { display: flex; align-items: center; gap: 1.75rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.6rem; list-style: none; }
+    .nav-links a { font-family: var(--font-mono); font-size: .8rem; color: var(--ink-2); text-decoration: none; padding-block: .2rem; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links .nav-cta {
+      color: var(--accent); background: none;
+      border: 1px solid color-mix(in oklch, var(--accent) 45%, transparent);
+      padding: .38rem .85rem; border-radius: 7px;
+      transition: background-color .2s, color .2s;
     }
+    .nav-links .nav-cta:hover { background: var(--accent); color: var(--on-accent); }
+    .nav-tools { display: flex; align-items: center; gap: .5rem; }
+    .lang-toggle { display: flex; padding: 2px; border: 1px solid var(--line); border-radius: 8px; }
     .lang-btn {
-      background: none; border: none; cursor: pointer;
-      color: var(--text-dim); padding: .25rem .4rem; border-radius: 3px;
-      font-family: inherit; font-size: inherit; letter-spacing: .05em;
-      transition: color .2s, background .2s;
+      font: 600 .72rem/1 var(--font-mono); letter-spacing: .04em;
+      color: var(--ink-3); background: none; border: 0; padding: .45rem .5rem; border-radius: 6px;
+      cursor: pointer; transition: color .2s, background-color .2s;
     }
-    .lang-btn:hover { color: var(--text-muted); }
-    .lang-btn.active { color: var(--accent); background: var(--accent-dim); }
-    .lang-sep { color: var(--text-dim); user-select: none; }
-
-    .hamburger {
-      display: none; flex-direction: column; gap: 5px;
-      cursor: pointer; padding: 4px; background: none; border: none;
+    .lang-btn:hover { color: var(--ink); }
+    .lang-btn[aria-pressed="true"] { color: var(--ink); background: var(--surface-2); }
+    .icon-btn {
+      position: relative; display: grid; place-items: center; width: 2.25rem; height: 2.25rem;
+      border: 1px solid var(--line); border-radius: 8px; background: none; color: var(--ink-2);
+      cursor: pointer; transition: color .2s, border-color .2s;
     }
-    .hamburger span { width: 22px; height: 1.5px; background: var(--text-muted); display: block; transition: .3s; }
-
-    /* ── SECTIONS ── */
-    section { position: relative; z-index: 1; padding: 6rem clamp(1.5rem, 5vw, 3rem); }
-    .container { max-width: var(--max-w); margin: 0 auto; }
-    .section-label {
-      font-family: var(--font-mono); font-size: .7rem;
-      color: var(--accent); letter-spacing: .15em; text-transform: uppercase;
-      margin-bottom: .6rem; display: flex; align-items: center; gap: .45rem;
+    .icon-btn:hover { color: var(--ink); border-color: var(--line-strong); }
+    .theme-btn svg {
+      position: absolute; inset: 0; margin: auto; width: 1rem; height: 1rem;
+      transition: opacity .3s, transform .5s var(--ease-out);
     }
-    .section-label::before { content: '//'; color: var(--text-dim); }
-    .section-title {
-      font-family: var(--font-mono); font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 700; color: var(--text); margin-bottom: 3rem; line-height: 1.2;
-    }
+    .theme-btn .i-moon { opacity: 0; transform: rotate(-90deg) scale(.5); }
+    .theme-btn[data-next="dark"] .i-sun { opacity: 0; transform: rotate(90deg) scale(.5); }
+    .theme-btn[data-next="dark"] .i-moon { opacity: 1; transform: none; }
+    html:not(.js) .lang-toggle, html:not(.js) .theme-btn { display: none; }
+    .hamburger { display: none; }
+    .hamburger .bars span { display: block; width: 16px; height: 1.5px; background: currentColor; transition: transform .3s var(--ease-out); }
+    .hamburger .bars span + span { margin-top: 5px; }
+    .hamburger[aria-expanded="true"] .bars span:first-child { transform: translateY(3.25px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] .bars span:last-child { transform: translateY(-3.25px) rotate(-45deg); }
+    .progress { display: none; }
 
     /* ── HERO ── */
-    #hero {
-      min-height: 100vh; display: flex; flex-direction: column;
-      justify-content: center; padding-top: calc(var(--nav-h) + 2rem);
+    .hero {
+      display: flex; align-items: center; min-height: min(100svh, 880px);
+      padding-top: calc(var(--nav-h) + clamp(2.5rem, 6vw, 4.5rem));
+      padding-bottom: clamp(3.5rem, 7vw, 6rem);
     }
-    .hero-eyebrow {
-      font-family: var(--font-mono); font-size: .72rem;
-      color: var(--text-dim); margin-bottom: 1.75rem; letter-spacing: .1em;
+    .hero .container {
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      align-items: center; gap: clamp(2.5rem, 5vw, 4.5rem);
     }
-    .hero-eyebrow span { color: var(--accent); }
+    .hero-status {
+      display: inline-flex; align-items: center; gap: .65rem; margin-bottom: 1.6rem;
+      font-family: var(--font-mono); font-size: .78rem; color: var(--ink-3);
+    }
+    .hero-name {
+      margin-bottom: 1.5rem;
+      font-family: var(--font-mono); font-weight: 600;
+      font-size: clamp(2.1rem, 1rem + 3.6vw, 3.6rem); line-height: 1.05; letter-spacing: -.03em;
+    }
+    .hero-name .l { display: block; overflow: hidden; padding-bottom: .1em; margin-bottom: -.1em; }
+    .hero-name .l > span { display: block; }
+    .hero-role {
+      max-width: 30ch; margin-bottom: 1rem;
+      font-size: clamp(1.15rem, 1.05rem + .4vw, 1.35rem); font-weight: 500; line-height: 1.4;
+      text-wrap: balance;
+    }
+    .hero-pitch { max-width: 44ch; margin-bottom: 2.1rem; color: var(--ink-2); text-wrap: pretty; }
+    .hero-links { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; list-style: none; }
+    .hero-links a {
+      display: inline-flex; align-items: center; gap: .5rem; padding-block: .3rem;
+      font-family: var(--font-mono); font-size: .8rem; color: var(--ink-2);
+    }
+    .hero-links a:hover { color: var(--accent); }
+    .hero-links svg { width: 15px; height: 15px; fill: currentColor; transition: transform .3s var(--ease-out); }
+    .hero-links a:hover svg { transform: translateY(-2px); }
 
-    /* Terminal */
+    /* Terminal que dibuja el mapa */
     .terminal {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 10px; overflow: hidden; max-width: 660px; margin-bottom: 3rem;
-      box-shadow: 0 0 0 1px rgba(0,0,0,.5), 0 24px 64px rgba(0,0,0,.45), 0 0 80px rgba(0,229,160,.05);
+      overflow: hidden; border: 1px solid var(--term-line); border-radius: 12px;
+      background: var(--term-bg); color: var(--term-ink); font-family: var(--font-mono);
     }
-    .terminal-bar {
-      background: var(--surface-2); padding: .55rem 1rem;
-      display: flex; align-items: center; gap: .5rem; border-bottom: 1px solid var(--border);
+    .term-bar {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: .65rem 1rem; background: var(--term-bar); border-bottom: 1px solid var(--term-line);
+      font-size: .72rem; color: var(--term-ink-3);
     }
-    .dot { width: 11px; height: 11px; border-radius: 50%; }
-    .dot-r { background: #ff5f57; } .dot-y { background: #ffbd2e; } .dot-g { background: #28c840; }
-    .terminal-title { font-family: var(--font-mono); font-size: .65rem; color: var(--text-dim); margin: 0 auto; }
-    .terminal-body { padding: 1.4rem 1.6rem; font-family: var(--font-mono); font-size: .86rem; line-height: 1.9; }
-    .t-prompt .user { color: var(--accent); }
-    .t-prompt .sep  { color: var(--text-dim); }
-    .t-prompt .cmd  { color: var(--text); }
-    .t-name { font-size: 1.05rem; font-weight: 700; color: var(--text); }
-    .t-role { color: var(--blue); font-size: .83rem; }
-    .t-loc  { color: var(--text-muted); font-size: .78rem; }
-    .cursor {
-      display: inline-block; width: 9px; height: 1em;
-      background: var(--accent); vertical-align: text-bottom;
-      animation: blink 1.1s step-end infinite;
-    }
-    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .term-state { display: inline-flex; align-items: center; gap: .5rem; }
+    .terminal .dot { background: var(--term-accent); box-shadow: 0 0 0 3px oklch(0.80 0.12 163 / .16); }
+    .term-body { padding: 1.1rem 1.25rem 1.2rem; font-size: .85rem; line-height: 1.75; }
+    .term-line { display: flex; align-items: center; gap: .6ch; white-space: nowrap; }
+    .t-prompt { color: var(--term-accent); }
+    .t-cmd { display: inline-block; overflow: hidden; vertical-align: bottom; }
+    .t-out { align-items: flex-start; gap: .75rem; white-space: normal; color: var(--term-ink-2); }
+    .t-out .dot { margin-top: .6em; }
+    .cursor { display: inline-block; width: .55em; height: 1.05em; background: var(--term-accent); }
+    .cursor--cmd { display: none; }
+    .infra-wrap { margin: 1rem 0 1.1rem; }
+    .infra { width: 100%; height: auto; overflow: visible; }
+    .infra--tall { display: none; }
+    .infra .edge { fill: none; stroke: var(--term-edge); stroke-width: 1.25; stroke-dasharray: 1; transition: stroke .3s; }
+    .infra .pulse { display: none; fill: none; stroke: var(--term-accent); stroke-width: 2.25; stroke-linecap: round; stroke-dasharray: .1 1.1; }
+    .infra rect { fill: var(--term-node); stroke: var(--term-line); stroke-width: 1; transition: stroke .3s, fill .3s; }
+    .infra .n-title { fill: var(--term-ink); font: 600 13px var(--font-mono); }
+    .infra .n-sub { fill: var(--term-ink-3); font: 400 11px var(--font-mono); }
+    .infra .n-dot { fill: var(--term-accent); }
+    .infra .n-ring { fill: none; stroke: var(--term-accent); stroke-width: 1.25; opacity: 0; transform-box: fill-box; transform-origin: center; }
+    .infra .node:hover rect { stroke: var(--term-accent); fill: oklch(0.22 0.03 163); }
+    .infra:has(.n-azure:hover) :is(.e-lb, .e-azure),
+    .infra:has(.n-aws:hover) :is(.e-lb, .e-aws),
+    .infra:has(.n-do:hover) :is(.e-lb, .e-do),
+    .infra:has(.n-swarm:hover) .edge,
+    .infra:has(.n-lb:hover) .edge { stroke: var(--term-accent); }
 
-    /* Hero links */
-    .hero-links { display: flex; gap: 1.75rem; flex-wrap: wrap; align-items: center; }
-    .hero-link {
-      display: flex; align-items: center; gap: .45rem;
-      font-family: var(--font-mono); font-size: .77rem;
-      color: var(--text-muted); text-decoration: none; transition: color .2s;
+    /* ── SECTIONS ── */
+    .section { padding-block: clamp(4.5rem, 9vw, 7rem); border-top: 1px solid var(--line); }
+    .section-head {
+      display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+      gap: .75rem 2rem; margin-bottom: clamp(2rem, 4vw, 3rem);
     }
-    .hero-link:hover { color: var(--accent); }
-    .hero-link svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
-
-    /* Scroll hint */
-    .scroll-hint {
-      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
-      display: flex; flex-direction: column; align-items: center; gap: .4rem;
-      opacity: .25; animation: float 2.6s ease-in-out infinite;
+    .section-title {
+      font-family: var(--font-mono); font-weight: 600;
+      font-size: clamp(1.6rem, 1.15rem + 1.5vw, 2.25rem); line-height: 1.15; letter-spacing: -.02em;
+      text-wrap: balance;
     }
-    .scroll-hint span { font-family: var(--font-mono); font-size: .62rem; color: var(--text-dim); letter-spacing: .12em; }
-    .scroll-line { width: 1px; height: 38px; background: linear-gradient(to bottom, var(--text-dim), transparent); }
-    @keyframes float { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(7px)} }
+    .section-title::after {
+      content: ''; display: inline-block; width: .5em; height: .85em; margin-left: .15em;
+      vertical-align: -.06em; background: var(--accent); opacity: 0;
+    }
+    .section-note { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-mono); font-size: .78rem; color: var(--ink-3); }
 
-    /* ── ABOUT ── */
-    #about { border-top: 1px solid var(--border); }
-    .about-grid { display: grid; grid-template-columns: 1fr 270px; gap: 4rem; align-items: start; }
-    .about-text p { color: var(--text-muted); font-size: .97rem; line-height: 1.85; margin-bottom: 1.25rem; font-weight: 300; }
-    .about-text p strong { color: var(--text); font-weight: 500; }
-    .about-text p:last-child { margin-bottom: 0; }
-    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: 7px; padding: 1.2rem; margin-bottom: 1.25rem; }
-    .sidebar-card:last-child { margin-bottom: 0; }
-    .sidebar-card h4 { font-family: var(--font-mono); font-size: .68rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .12em; margin-bottom: 1rem; }
-    .lang-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: .55rem; }
-    .lang-item:last-child { margin-bottom: 0; }
-    .lang-name { font-family: var(--font-mono); font-size: .8rem; color: var(--text); }
-    .lang-lvl { font-family: var(--font-mono); font-size: .68rem; color: var(--accent); background: var(--accent-dim); padding: .13rem .55rem; border-radius: 2px; }
-    .stat-item { display: flex; align-items: baseline; gap: .5rem; margin-bottom: .7rem; }
-    .stat-item:last-child { margin-bottom: 0; }
-    .stat-num { font-family: var(--font-mono); font-size: 1.55rem; font-weight: 700; color: var(--accent); line-height: 1; }
-    .stat-label { font-size: .78rem; color: var(--text-muted); line-height: 1.3; }
-
-    /* ── SKILLS ── */
-    #skills { border-top: 1px solid var(--border); }
-    .skills-grid { display: flex; flex-direction: column; gap: 1.75rem; }
-    .skill-row { display: grid; grid-template-columns: 130px 1fr; gap: 1.5rem; align-items: start; }
-    .skill-cat { font-family: var(--font-mono); font-size: .7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .12em; padding-top: .35rem; border-right: 1px solid var(--border); padding-right: 1.5rem; }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
-    .tag { font-family: var(--font-mono); font-size: .72rem; padding: .28rem .7rem; border-radius: 3px; border: 1px solid; transition: background .2s, border-color .2s; }
-    .tg { color:var(--accent);  border-color:rgba(0,229,160,.2);  background:rgba(0,229,160,.05); }
-    .tg:hover { background:rgba(0,229,160,.13);  border-color:rgba(0,229,160,.4); }
-    .tb { color:var(--blue);   border-color:rgba(56,189,248,.2); background:rgba(56,189,248,.05); }
-    .tb:hover { background:rgba(56,189,248,.13); border-color:rgba(56,189,248,.4); }
-    .tp { color:var(--purple); border-color:rgba(192,132,252,.2); background:rgba(192,132,252,.05); }
-    .tp:hover { background:rgba(192,132,252,.13); border-color:rgba(192,132,252,.4); }
-    .to { color:var(--orange); border-color:rgba(251,146,60,.2);  background:rgba(251,146,60,.05); }
-    .to:hover { background:rgba(251,146,60,.13);  border-color:rgba(251,146,60,.4); }
-    .ty { color:var(--yellow); border-color:rgba(251,191,36,.2);  background:rgba(251,191,36,.05); }
-    .ty:hover { background:rgba(251,191,36,.13);  border-color:rgba(251,191,36,.4); }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; list-style: none; }
+    .chip {
+      display: inline-flex; align-items: center; gap: .45rem; padding: .28rem .7rem;
+      border: 1px solid var(--line); border-radius: 999px;
+      font-family: var(--font-mono); font-size: .74rem; line-height: 1.3; color: var(--ink-2);
+      transition: border-color .2s, color .2s;
+    }
+    .chip:hover { border-color: var(--line-strong); color: var(--ink); }
+    .chip--core { color: var(--ink); border-color: color-mix(in oklch, var(--accent) 50%, var(--line)); }
+    .chip--core::before { content: ''; width: .4rem; height: .4rem; border-radius: 50%; background: var(--accent); }
+    .status { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-mono); font-size: .72rem; color: var(--ink-3); }
 
     /* ── PROJECTS ── */
-    #projects { border-top: 1px solid var(--border); }
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(285px, 1fr)); gap: 1.1rem; }
-    .project-card {
-      position: relative; background: var(--surface); border: 1px solid var(--border);
-      border-radius: 8px; padding: 1.45rem; text-decoration: none;
-      display: flex; flex-direction: column; gap: .7rem;
-      transition: border-color .25s, transform .25s, box-shadow .25s; overflow: hidden;
+    .featured { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem; }
+    .feature {
+      position: relative; display: flex; flex-direction: column; gap: .9rem;
+      padding: clamp(1.4rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
+      transition: border-color .3s var(--ease-out), transform .3s var(--ease-out);
     }
-    .project-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, transparent, var(--accent), transparent);
-      opacity: 0; transition: opacity .25s;
+    .feature:hover { border-color: color-mix(in oklch, var(--accent) 45%, var(--line)); transform: translateY(-3px); }
+    .feature:has(a:focus-visible) { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .feature-name { font-family: var(--font-mono); font-size: clamp(1.25rem, 1.1rem + .6vw, 1.6rem); font-weight: 600; line-height: 1.2; letter-spacing: -.02em; }
+    .feature-name a { text-decoration: none; }
+    .feature-name a:focus-visible { outline: none; }
+    .feature-name a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+    .feature-desc { color: var(--ink-2); text-wrap: pretty; }
+    .feature-foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto; padding-top: .4rem; }
+    .feature-url { font-family: var(--font-mono); font-size: .75rem; color: var(--ink-3); transition: color .2s; }
+    .feature:hover .feature-url { color: var(--accent); }
+    .arrow { font-family: var(--font-mono); color: var(--ink-3); transition: transform .3s var(--ease-out), color .2s; }
+    .feature:hover .arrow, a.index-row:hover .arrow, a.index-row:focus-visible .arrow { color: var(--accent); transform: translate(3px, -3px); }
+
+    .index { list-style: none; border-top: 1px solid var(--line); }
+    .index-row {
+      position: relative; isolation: isolate;
+      display: grid; grid-template-columns: 10rem minmax(0, 1fr) 1.5rem; gap: .3rem 1.75rem; align-items: baseline;
+      padding: 1.25rem .75rem; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none;
     }
-    .project-card:hover { border-color: var(--border-hover); transform: translateY(-3px); box-shadow: 0 14px 44px rgba(0,0,0,.32), 0 0 0 1px rgba(0,229,160,.06); }
-    .project-card:hover::before { opacity: 1; }
-    .project-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
-    .project-icon { font-family: var(--font-mono); font-size: 1.1rem; color: var(--accent); line-height: 1; }
-    .project-ext { font-family: var(--font-mono); font-size: .68rem; color: var(--text-dim); transition: color .2s; }
-    .project-card:hover .project-ext { color: var(--accent); }
-    .project-name { font-family: var(--font-mono); font-size: .92rem; font-weight: 600; color: var(--text); line-height: 1.3; }
-    .project-desc { font-size: .82rem; color: var(--text-muted); line-height: 1.65; flex-grow: 1; }
-    .project-stack { display: flex; flex-wrap: wrap; gap: .32rem; margin-top: auto; }
-    .ptag { font-family: var(--font-mono); font-size: .65rem; color: var(--text-dim); background: rgba(255,255,255,.04); padding: .18rem .48rem; border-radius: 2px; }
+    a.index-row::before {
+      content: ''; position: absolute; inset: 0; z-index: -1; background: var(--surface);
+      transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease-out);
+    }
+    a.index-row:hover::before, a.index-row:focus-visible::before { transform: scaleX(1); }
+    .index-main { display: grid; gap: .3rem; }
+    .index-name { font-family: var(--font-mono); font-size: 1rem; font-weight: 600; color: var(--ink); }
+    .index-desc { max-width: 70ch; font-size: .98rem; color: var(--ink-2); text-wrap: pretty; }
+    .index-stack { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-3); }
+    .index-row .arrow { justify-self: end; }
 
     /* ── EXPERIENCE ── */
-    #experience { border-top: 1px solid var(--border); }
-    .timeline { display: flex; flex-direction: column; }
-    .tl-item { display: grid; grid-template-columns: 190px 1fr; gap: 2rem; position: relative; padding-bottom: 3rem; }
-    .tl-item:last-child { padding-bottom: 0; }
-    .tl-item::after { content: ''; position: absolute; left: calc(190px + 0px); top: .6rem; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--border), transparent); transform: translateX(calc(-2rem + .5px)); }
-    .tl-item:last-child::after { display: none; }
-    .tl-meta { text-align: right; padding-right: 2rem; }
-    .tl-period { font-family: var(--font-mono); font-size: .68rem; color: var(--text-dim); line-height: 1.55; display: block; margin-bottom: .4rem; }
-    .tl-badge { font-family: var(--font-mono); font-size: .65rem; color: var(--accent); background: var(--accent-dim); padding: .12rem .5rem; border-radius: 2px; display: inline-block; }
-    .tl-content { position: relative; padding-left: 2rem; }
-    .tl-content::before { content: ''; position: absolute; left: -.5px; top: .55rem; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent-glow); transform: translateX(-50%); }
-    .tl-org { font-family: var(--font-mono); font-size: .68rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .2rem; }
-    .tl-role { font-family: var(--font-mono); font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: .7rem; }
-    .tl-desc { font-size: .83rem; color: var(--text-muted); line-height: 1.72; margin-bottom: .9rem; }
-    .tl-stack { display: flex; flex-wrap: wrap; gap: .32rem; }
-    .stag { font-family: var(--font-mono); font-size: .65rem; color: var(--text-dim); border: 1px solid var(--border); padding: .13rem .52rem; border-radius: 2px; }
+    .timeline { display: grid; gap: clamp(2rem, 4vw, 2.75rem); list-style: none; }
+    .tl-item { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 1.75rem; }
+    .tl-period { padding-top: .3rem; font-family: var(--font-mono); font-size: .78rem; color: var(--ink-3); }
+    .tl-body { position: relative; padding-left: 1.75rem; }
+    .tl-body::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--line); transform-origin: top; }
+    .tl-body::before {
+      content: ''; position: absolute; z-index: 1; left: -4px; top: .55rem; width: 9px; height: 9px; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 0 4px var(--bg), 0 0 0 7px var(--accent-soft);
+    }
+    .tl-role { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 600; line-height: 1.35; letter-spacing: -.01em; }
+    .tl-org { margin: .15rem 0 .8rem; font-size: .95rem; color: var(--ink-3); }
+    .tl-desc { max-width: 68ch; margin-bottom: 1rem; color: var(--ink-2); text-wrap: pretty; }
+
+    /* ── STACK ── */
+    .stack { display: grid; gap: 1.5rem; }
+    .stack-row {
+      display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 1.75rem; align-items: start;
+      padding-bottom: 1.5rem; border-bottom: 1px solid var(--line);
+    }
+    .stack-row:last-child { padding-bottom: 0; border-bottom: 0; }
+    .stack-row dt { padding-top: .3rem; font-family: var(--font-mono); font-size: .8rem; color: var(--ink-3); }
+
+    /* ── ABOUT ── */
+    .about { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+    .about-text p { max-width: 62ch; color: var(--ink-2); text-wrap: pretty; }
+    .about-text p + p { margin-top: 1.1rem; }
+    .about-text strong { color: var(--ink); font-weight: 600; }
+    .facts { display: grid; gap: 1.25rem; padding: 1.5rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+    .facts dt { margin-bottom: .2rem; font-family: var(--font-mono); font-size: .75rem; color: var(--ink-3); }
+    .facts dd { font-size: .98rem; line-height: 1.5; }
 
     /* ── CONTACT ── */
-    #contact { border-top: 1px solid var(--border); text-align: center; }
-    .contact-inner { max-width: 500px; margin: 0 auto; }
-    .contact-inner .section-label, .contact-inner .section-title { justify-content: center; }
-    .contact-desc { font-size: .93rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 2.5rem; }
-    .contact-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .cbtn { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--font-mono); font-size: .78rem; text-decoration: none; padding: .65rem 1.4rem; border-radius: 4px; transition: background .2s, color .2s, transform .2s; }
-    .cbtn svg { width: 15px; height: 15px; fill: currentColor; }
-    .cbtn-primary { background: var(--accent); color: #060909; font-weight: 600; }
-    .cbtn-primary:hover { background: #00ffc0; transform: translateY(-2px); }
-    .cbtn-secondary { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
-    .cbtn-secondary:hover { color: var(--text); border-color: var(--border-hover); transform: translateY(-2px); }
+    .contact { padding-block: clamp(5rem, 11vw, 8.5rem); }
+    .contact .section-title { font-size: clamp(2rem, 1.2rem + 3vw, 3.25rem); line-height: 1.05; letter-spacing: -.03em; margin-bottom: 1.1rem; }
+    .contact-desc { max-width: 46ch; margin-bottom: 2rem; color: var(--ink-2); }
+    .btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .55rem; padding: .75rem 1.25rem; border-radius: 8px;
+      font-family: var(--font-mono); font-size: .85rem; font-weight: 600; text-decoration: none;
+      transition: background-color .2s, border-color .2s, color .2s, transform .3s var(--ease-out);
+    }
+    .btn svg { width: 16px; height: 16px; fill: currentColor; transition: transform .3s var(--ease-out); }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:hover svg { transform: rotate(-8deg) scale(1.1); }
+    .btn-primary { background: var(--accent); color: var(--on-accent); }
+    .btn-primary:hover { background: color-mix(in oklch, var(--accent) 86%, var(--ink)); }
+    .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
+    .btn-ghost:hover { border-color: var(--line-strong); }
 
     /* ── FOOTER ── */
-    footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 1.4rem clamp(1.5rem, 5vw, 3rem); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-    .foot-l { font-family: var(--font-mono); font-size: .68rem; color: var(--text-dim); }
-    .foot-l span { color: var(--text-muted); }
-    .foot-r { display: flex; gap: 1.5rem; }
-    .foot-r a { font-family: var(--font-mono); font-size: .68rem; color: var(--text-dim); text-decoration: none; transition: color .2s; }
-    .foot-r a:hover { color: var(--accent); }
+    .footer { padding-block: 1.75rem; border-top: 1px solid var(--line); }
+    .footer .container {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1.5rem;
+      font-family: var(--font-mono); font-size: .75rem; color: var(--ink-3);
+    }
+    .footer nav { display: flex; gap: 1.25rem; }
+    .footer a { color: var(--ink-3); }
+    .footer a:hover { color: var(--ink); }
 
-    /* ── ANIMATIONS ── */
-    .fi { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
-    .fi.show { opacity: 1; transform: translateY(0); }
-    .fi.d1 { transition-delay: .1s; } .fi.d2 { transition-delay: .2s; } .fi.d3 { transition-delay: .3s; }
+    /* ── MOTION ── */
+    @media (prefers-reduced-motion: no-preference) {
+      /* Entrada del hero */
+      .rise { animation: rise .9s var(--ease-out) var(--d, 0s) both; }
+      .hero-name .l > span { animation: line-up 1s var(--ease-out) var(--d, 0s) both; }
+      .t-cmd { width: 9ch; animation: type .7s steps(9, end) .9s both; }
+      .cursor { animation: blink 1.1s step-end infinite; }
+      .cursor--cmd { display: inline-block; animation: blink 1.1s step-end infinite, gone 0s linear 1.7s forwards; }
+      .t-reveal { animation: fade .5s var(--ease-out) var(--d) both; }
+      .terminal .term-bar .dot, .hero-status .dot { animation: breathe 2.8s ease-in-out infinite; }
+
+      /* El mapa se traza, los nodos se encienden y luego circulan solicitudes */
+      .infra .edge { animation: draw .7s var(--ease-out) var(--d) both; }
+      .infra .node { animation: fade .5s var(--ease-out) var(--d) both; }
+      .infra .n-dot { animation: pop .45s var(--ease-out) var(--d) both; transform-box: fill-box; transform-origin: center; }
+      .infra .pulse { display: inline; }
+      .infra .pulse--short { animation: travel-short 5s linear 3.9s infinite both; }
+      .infra .pulse--long { animation: travel-long 5s linear 4.4s infinite both; }
+      .infra .n-ring { animation: ping 5s var(--ease-out) var(--d) infinite; }
+
+      /* Aparición al hacer scroll (solo lo que está debajo del pliegue al cargar) */
+      .pending:not([data-reveal="stagger"]) { opacity: 0; }
+      .pending[data-reveal="stagger"] > * { opacity: 0; }
+      .pending.in:not([data-reveal="stagger"]) { opacity: 1; animation: rise .9s var(--ease-out) both; }
+      .pending.in[data-reveal="title"] { animation: wipe .8s var(--ease-out) both; }
+      .pending.in[data-reveal="title"]::after { animation: trail 1.5s step-end .75s both; }
+      .pending.in[data-reveal="stagger"] > * { opacity: 1; animation: rise .8s var(--ease-out) calc(var(--i, 0) * 80ms) both; }
+      .timeline.pending.in .tl-body::after { animation: rail 1s var(--ease-out) calc(var(--i, 0) * 140ms + .1s) both; }
+      .timeline.pending.in .tl-body::before { animation: pop .5s var(--ease-out) calc(var(--i, 0) * 140ms + .45s) both; }
+      .stack.pending.in .chip { animation: chip .45s var(--ease-out) calc(var(--i, 0) * 90ms + var(--j, 0) * 28ms + .15s) both; }
+
+      @keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+      @keyframes line-up { from { transform: translateY(110%); } }
+      @keyframes type { from { width: 0; } }
+      @keyframes blink { 50% { opacity: 0; } }
+      @keyframes gone { to { visibility: hidden; width: 0; } }
+      @keyframes fade { from { opacity: 0; } }
+      @keyframes pop { from { transform: scale(0); } }
+      @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+      @keyframes breathe { 50% { box-shadow: 0 0 0 6px oklch(0.80 0.12 163 / .04); } }
+      @keyframes travel-short { 0% { stroke-dashoffset: .12; } 10%, 100% { stroke-dashoffset: -1; } }
+      @keyframes travel-long { 0% { stroke-dashoffset: .12; } 18%, 100% { stroke-dashoffset: -1; } }
+      @keyframes ping { 0% { opacity: .9; transform: scale(1); } 24%, 100% { opacity: 0; transform: scale(3.2); } }
+      @keyframes wipe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+      @keyframes trail { 0%, 40% { opacity: 1; } 20%, 60%, 100% { opacity: 0; } }
+      @keyframes rail { from { transform: scaleY(0); } }
+      @keyframes chip { from { opacity: 0; transform: translateY(6px) scale(.96); } }
+
+      /* Barra de progreso de lectura bajo el menú */
+      @supports (animation-timeline: scroll()) {
+        .progress {
+          display: block; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
+          background: var(--accent); transform-origin: left; transform: scaleX(0);
+          animation: progress linear both; animation-timeline: scroll(root);
+        }
+        @keyframes progress { to { transform: scaleX(1); } }
+      }
+
+      /* Cambio de tema: el nuevo se expande en círculo desde el botón */
+      html[data-vt="theme"]::view-transition-old(root),
+      html[data-vt="theme"]::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: var(--nav-h); left: 0; right: 0; background: rgba(8,12,13,.97); backdrop-filter: blur(20px); padding: 1.5rem 2rem; gap: 1.4rem; border-bottom: 1px solid var(--border); z-index: 99; }
-      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .skill-row { grid-template-columns: 1fr; gap: .65rem; }
-      .skill-cat { border-right: none; padding-right: 0; border-bottom: 1px solid var(--border); padding-bottom: .4rem; }
-      .tl-item { grid-template-columns: 1fr; gap: .4rem; }
-      .tl-meta { text-align: left; padding-right: 0; padding-left: 2rem; }
-      .tl-item::after { left: 1rem; transform: none; }
-      .tl-content::before { left: -1rem; }
-      footer { flex-direction: column; text-align: center; }
+    @media (max-width: 980px) {
+      .hero { min-height: 0; }
+      .hero .container { grid-template-columns: minmax(0, 1fr); }
+      .terminal { width: 100%; max-width: 640px; }
     }
-    @media (max-width: 480px) { .projects-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 860px) {
+      .hamburger { display: grid; }
+      .nav-links {
+        display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: var(--z-menu);
+        flex-direction: column; align-items: stretch; gap: 0;
+        padding: .5rem var(--gutter) 1.5rem; background: var(--bg); border-bottom: 1px solid var(--line);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { display: block; padding: .85rem 0; font-size: .95rem; }
+      .nav-links .nav-cta { display: inline-block; margin-top: .75rem; padding: .6rem 1rem; }
+      html:not(.js) .hamburger { display: none; }
+    }
+    @media (max-width: 760px) {
+      .featured, .about { grid-template-columns: minmax(0, 1fr); }
+      .tl-item, .stack-row { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
+      .tl-period, .stack-row dt { padding-top: 0; }
+      .index-row { grid-template-columns: minmax(0, 1fr) 1.5rem; padding-inline: .25rem; }
+      .index-row .status { grid-column: 1 / -1; }
+    }
+    @media (max-width: 599px) {
+      .infra--wide { display: none; }
+      .infra--tall { display: block; }
+      .term-body { padding: 1rem; font-size: .8rem; }
+      .brand-name { display: none; }
+    }
   </style>
 </head>
 <body>
 
+<a class="skip" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
+
 <!-- ── NAV ── -->
-<nav id="nav">
-  <a href="#hero" class="nav-logo">juandavid<span>.dev</span></a>
-  <div class="nav-right">
-    <ul class="nav-links" id="navlinks">
-      <li><a href="#about"      data-i18n="nav.about">about</a></li>
-      <li><a href="#skills"     data-i18n="nav.skills">skills</a></li>
-      <li><a href="#projects"   data-i18n="nav.projects">projects</a></li>
-      <li><a href="#experience" data-i18n="nav.experience">experience</a></li>
-      <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">--contact</a></li>
-    </ul>
-    <div class="lang-toggle">
-      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
-      <span class="lang-sep">/</span>
-      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="brand" data-i18n-aria="brand.home" aria-label="juandavid.dev, volver al inicio">
+      <span class="brand-mark" aria-hidden="true">jd</span>
+      <span class="brand-name" aria-hidden="true">juandavid<span>.dev</span></span>
+    </a>
+    <div class="nav-right">
+      <nav data-i18n-aria="nav.label" aria-label="Principal">
+        <ul class="nav-links" id="navlinks">
+          <li><a href="#projects"   class="uline" data-i18n="nav.projects">proyectos</a></li>
+          <li><a href="#experience" class="uline" data-i18n="nav.experience">experiencia</a></li>
+          <li><a href="#skills"     class="uline" data-i18n="nav.skills">stack</a></li>
+          <li><a href="#about"      class="uline" data-i18n="nav.about">sobre mí</a></li>
+          <li><a href="#contact"    class="nav-cta" data-i18n="nav.contact">contacto</a></li>
+        </ul>
+      </nav>
+      <div class="nav-tools">
+        <div class="lang-toggle" role="group" data-i18n-aria="nav.lang" aria-label="Idioma">
+          <button type="button" class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" class="icon-btn theme-btn" id="theme-btn" aria-label="Cambiar a modo claro">
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+        </button>
+        <button type="button" class="icon-btn hamburger" id="hamburger" aria-expanded="false" aria-controls="navlinks" data-i18n-aria="nav.menu" aria-label="Menú">
+          <span class="bars" aria-hidden="true"><span></span><span></span></span>
+        </button>
+      </div>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menú" onclick="toggleNav()">
-      <span></span><span></span><span></span>
-    </button>
   </div>
-</nav>
+  <div class="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
 
 <!-- ── HERO ── -->
-<section id="hero">
+<section id="hero" class="hero" aria-labelledby="hero-name">
   <div class="container">
-    <p class="hero-eyebrow fi" data-i18n="hero.eyebrow">// <span>Bogotá, Colombia</span> — disponible para trabajo remoto</p>
-
-    <div class="terminal fi d1">
-      <div class="terminal-bar">
-        <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
-        <div class="terminal-title">bash — juandavid@dev</div>
-      </div>
-      <div class="terminal-body">
-        <div class="t-prompt">
-          <span class="user">juan</span><span class="sep">@</span><span class="user">juandavid</span><span class="sep">:~$</span>&nbsp;<span id="t-typing"></span><span class="cursor" id="t-cursor1"></span>
-        </div>
-        <div id="t-output" style="margin-top:.3rem; visibility:hidden">
-          <div class="t-name">Juan David Rueda Quiroga</div>
-          <div class="t-role" id="tl-1">Software Developer &amp; Cloud Infrastructure Engineer</div>
-          <div class="t-loc"  id="tl-2" data-i18n="hero.loc">Bogotá, Colombia 🇨🇴 &nbsp;·&nbsp; 7+ años en producción</div>
-        </div>
-        <div id="t-prompt2" style="margin-top:.85rem; visibility:hidden" class="t-prompt">
-          <span class="user">juan</span><span class="sep">@</span><span class="user">juandavid</span><span class="sep">:~$</span>&nbsp;<span class="cursor"></span>
-        </div>
-      </div>
+    <div class="hero-copy">
+      <p class="hero-status rise" style="--d:0s"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.status">Bogotá, Colombia · 7+ años en producción</span></p>
+      <h1 class="hero-name" id="hero-name">
+        <span class="l"><span style="--d:.05s">Juan David</span></span>
+        <span class="l"><span style="--d:.15s">Rueda Quiroga</span></span>
+      </h1>
+      <p class="hero-role rise" style="--d:.3s" data-i18n="hero.role">Ingeniero de Sistemas. Backend, apps móviles e infraestructura en la nube.</p>
+      <p class="hero-pitch rise" style="--d:.4s" data-i18n="hero.pitch">Construyo y opero plataformas que organizaciones en Colombia usan todos los días: del levantamiento de requisitos al servidor en producción.</p>
+      <ul class="hero-links rise" style="--d:.5s" data-i18n-aria="hero.links" aria-label="Perfiles y contacto">
+        <li>
+          <a href="https://github.com/jruedaq" target="_blank" rel="me noopener" class="uline">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.930 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            github.com/jruedaq
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/jruedaq" target="_blank" rel="me noopener" class="uline">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            linkedin.com/in/jruedaq
+          </a>
+        </li>
+        <li>
+          <a href="mailto:j@juandavid.dev" class="uline">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            j@juandavid.dev
+          </a>
+        </li>
+        <li>
+          <a href="https://platzi.com/@jruedaq" target="_blank" rel="noopener" class="uline">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6392 1.127L2.486 9.282a3.842 3.842 0 000 5.4361l8.1552 8.1552a3.842 3.842 0 005.4361 0l2.719-2.718-2.719-2.7181-2.718 2.718-8.1562-8.1551 8.1552-8.1552 5.437 5.4371-5.437 5.4361 2.718 2.719 5.4371-5.437a3.842 3.842 0 000-5.4372l-5.448-5.436a3.828 3.828 0 00-5.4252 0z"/></svg>
+            Platzi
+          </a>
+        </li>
+      </ul>
     </div>
 
-    <div class="hero-links fi d2">
-      <a href="https://github.com/jruedaq" target="_blank" rel="noopener" class="hero-link">
-        <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        github.com/jruedaq
-      </a>
-      <a href="https://www.linkedin.com/in/jruedaq" target="_blank" rel="noopener" class="hero-link">
-        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        linkedin.com/in/jruedaq
-      </a>
-      <a href="mailto:j@juandavid.dev" class="hero-link">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        j@juandavid.dev
-      </a>
-      <a href="https://platzi.com/@jruedaq" target="_blank" rel="noopener" class="hero-link">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M10.6392 1.127L2.486 9.282a3.842 3.842 0 000 5.4361l8.1552 8.1552a3.842 3.842 0 005.4361 0l2.719-2.718-2.719-2.7181-2.718 2.718-8.1562-8.1551 8.1552-8.1552 5.437 5.4371-5.437 5.4361 2.718 2.719 5.4371-5.437a3.842 3.842 0 000-5.4372l-5.448-5.436a3.828 3.828 0 00-5.4252 0z"/>
-        </svg>
-        Platzi
-      </a>
-    </div>
-  </div>
-  <div class="scroll-hint" aria-hidden="true">
-    <span>scroll</span><div class="scroll-line"></div>
-  </div>
-</section>
+    <div class="terminal rise" style="--d:.35s">
+      <div class="term-bar">
+        <span>juan@juandavid: ~</span>
+        <span class="term-state"><span class="dot" aria-hidden="true"></span><span data-i18n="term.state">producción</span></span>
+      </div>
+      <div class="term-body">
+        <p class="term-line"><span class="t-prompt" aria-hidden="true">$</span><span class="t-cmd">infra map</span><span class="cursor cursor--cmd" aria-hidden="true"></span></p>
 
-<!-- ── ABOUT ── -->
-<section id="about">
-  <div class="container">
-    <div class="section-label" data-i18n="nav.about">about</div>
-    <h2 class="section-title" data-i18n="about.title">Quién soy</h2>
-    <div class="about-grid fi">
-      <div class="about-text">
-        <p data-i18n="about.p1">Soy un <strong>Desarrollador de Software e Ingeniero de Infraestructura en la Nube</strong> con más de 7 años construyendo sistemas que corren en producción — no solo en localhost.</p>
-        <p data-i18n="about.p2">Me especializo en <strong>backend con PHP y Laravel</strong>, desarrollo móvil multiplataforma con <strong>Flutter</strong>, y arquitecturas distribuidas sobre <strong>Azure, AWS y DigitalOcean</strong>. He diseñado clústeres Docker Swarm con balanceador de carga, pipelines CI/CD, y plataformas activas que sirven a organizaciones sociales en Colombia.</p>
-        <p data-i18n="about.p3">Construí <strong>Arcturus</strong>, un framework PHP propio utilizado en proyectos reales de producción. He integrado automatizaciones con <strong>n8n</strong>, chatbots de WhatsApp, escaneo de cédulas colombianas PDF417, y la API gubernamental de SECOP.</p>
-        <p data-i18n="about.p4">Me gradué como <strong>Ingeniero de Sistemas</strong> en la ETITC el 23 de octubre de 2026; mi trabajo de grado recibió <strong>Mención Meritoria</strong> del Consejo Académico. Cuento con <strong>Tarjeta Profesional COPNIA</strong> como Tecnólogo en Desarrollo de Software.</p>
-      </div>
-      <div>
-        <div class="sidebar-card">
-          <h4 data-i18n="about.lang.label">// idiomas</h4>
-          <div class="lang-item">
-            <span class="lang-name">Español</span>
-            <span class="lang-lvl" data-i18n="about.lang.native">Nativo</span>
-          </div>
-          <div class="lang-item">
-            <span class="lang-name">English</span>
-            <span class="lang-lvl" data-i18n="about.lang.en">A2</span>
-          </div>
-        </div>
-        <div class="sidebar-card">
-          <h4 data-i18n="about.stats.label">// en números</h4>
-          <div class="stat-item">
-            <span class="stat-num">7+</span>
-            <span class="stat-label" data-i18n="about.stats.years">años en producción</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">3</span>
-            <span class="stat-label" data-i18n="about.stats.cloud">proveedores cloud</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">10+</span>
-            <span class="stat-label" data-i18n="about.stats.projects">proyectos activos</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="infra-wrap">
+          <!-- Mapa ancho (desktop y tablet) -->
+          <svg class="infra infra--wide" viewBox="0 0 520 248" role="img" aria-labelledby="infra-w-title infra-w-desc">
+            <title id="infra-w-title" data-i18n="infra.title">Mapa de infraestructura</title>
+            <desc id="infra-w-desc" data-i18n="infra.desc">Un balanceador de carga dirige el tráfico a un clúster Docker Swarm, integrado con servicios en Azure (máquina virtual y MySQL), AWS (EC2, S3, SES y ECR) y DigitalOcean (Droplet).</desc>
+            <path class="edge e-lb"    style="--d:1.7s"  pathLength="1" d="M260 38 V78"/>
+            <path class="edge e-azure" style="--d:2.15s" pathLength="1" d="M260 122 V140 Q260 148 252 148 H90 Q82 148 82 156 V176"/>
+            <path class="edge e-aws"   style="--d:2.2s"  pathLength="1" d="M260 122 V176"/>
+            <path class="edge e-do"    style="--d:2.25s" pathLength="1" d="M260 122 V140 Q260 148 268 148 H430 Q438 148 438 156 V176"/>
+            <path class="pulse pulse--short" pathLength="1" d="M260 38 V78"/>
+            <path class="pulse pulse--long"  pathLength="1" d="M260 122 V140 Q260 148 252 148 H90 Q82 148 82 156 V176"/>
+            <path class="pulse pulse--long"  pathLength="1" d="M260 122 V176"/>
+            <path class="pulse pulse--long"  pathLength="1" d="M260 122 V140 Q260 148 268 148 H430 Q438 148 438 156 V176"/>
+            <g class="node n-lb" style="--d:1.5s">
+              <rect x="185" y="4" width="150" height="34" rx="7"/>
+              <text class="n-title" x="260" y="25.5" text-anchor="middle" data-i18n="infra.lb">balanceador</text>
+              <circle class="n-dot"  cx="323" cy="21" r="3.5" style="--d:2.9s"/>
+              <circle class="n-ring" cx="323" cy="21" r="3.5" style="--d:3.9s"/>
+            </g>
+            <g class="node n-swarm" style="--d:1.95s">
+              <rect x="180" y="78" width="160" height="44" rx="7"/>
+              <text class="n-title" x="260" y="97" text-anchor="middle">docker swarm</text>
+              <text class="n-sub" x="260" y="113" text-anchor="middle" data-i18n="infra.swarm">contenedores</text>
+              <circle class="n-dot"  cx="328" cy="90" r="3.5" style="--d:2.95s"/>
+              <circle class="n-ring" cx="328" cy="90" r="3.5" style="--d:4.4s"/>
+            </g>
+            <g class="node n-azure" style="--d:2.5s">
+              <rect x="4" y="176" width="156" height="64" rx="7"/>
+              <text class="n-title" x="82" y="203" text-anchor="middle">azure</text>
+              <text class="n-sub" x="82" y="222" text-anchor="middle">vm · mysql</text>
+              <circle class="n-dot"  cx="148" cy="188" r="3.5" style="--d:3s"/>
+              <circle class="n-ring" cx="148" cy="188" r="3.5" style="--d:5.3s"/>
+            </g>
+            <g class="node n-aws" style="--d:2.57s">
+              <rect x="182" y="176" width="156" height="64" rx="7"/>
+              <text class="n-title" x="260" y="203" text-anchor="middle">aws</text>
+              <text class="n-sub" x="260" y="222" text-anchor="middle">ec2 · s3 · ses · ecr</text>
+              <circle class="n-dot"  cx="326" cy="188" r="3.5" style="--d:3.05s"/>
+              <circle class="n-ring" cx="326" cy="188" r="3.5" style="--d:5.1s"/>
+            </g>
+            <g class="node n-do" style="--d:2.64s">
+              <rect x="360" y="176" width="156" height="64" rx="7"/>
+              <text class="n-title" x="438" y="203" text-anchor="middle">digitalocean</text>
+              <text class="n-sub" x="438" y="222" text-anchor="middle">droplet</text>
+              <circle class="n-dot"  cx="504" cy="188" r="3.5" style="--d:3.1s"/>
+              <circle class="n-ring" cx="504" cy="188" r="3.5" style="--d:5.3s"/>
+            </g>
+          </svg>
 
-<!-- ── SKILLS ── -->
-<section id="skills">
-  <div class="container">
-    <div class="section-label" data-i18n="nav.skills">skills</div>
-    <h2 class="section-title" data-i18n="skills.title">Stack técnico</h2>
-    <div class="skills-grid">
-      <div class="skill-row fi">
-        <div class="skill-cat">Backend</div>
-        <div class="skill-tags">
-          <span class="tag tg">PHP</span><span class="tag tg">Laravel</span>
-          <span class="tag tg">Go</span><span class="tag tg">Java</span>
-          <span class="tag tg">Python</span><span class="tag tg">Node.js</span>
-          <span class="tag tg">Directus</span>
+          <!-- Mapa vertical (celular) -->
+          <svg class="infra infra--tall" viewBox="0 0 320 310" role="img" aria-labelledby="infra-t-title infra-t-desc">
+            <title id="infra-t-title" data-i18n="infra.title">Mapa de infraestructura</title>
+            <desc id="infra-t-desc" data-i18n="infra.desc">Un balanceador de carga dirige el tráfico a un clúster Docker Swarm, integrado con servicios en Azure (máquina virtual y MySQL), AWS (EC2, S3, SES y ECR) y DigitalOcean (Droplet).</desc>
+            <path class="edge e-lb"    style="--d:1.7s"  pathLength="1" d="M160 36 V62"/>
+            <path class="edge e-azure" style="--d:2.15s" pathLength="1" d="M160 106 V120 Q160 128 152 128 H28 Q20 128 20 136 V164 Q20 172 28 172 H40"/>
+            <path class="edge e-aws"   style="--d:2.2s"  pathLength="1" d="M160 106 V120 Q160 128 152 128 H28 Q20 128 20 136 V220 Q20 228 28 228 H40"/>
+            <path class="edge e-do"    style="--d:2.25s" pathLength="1" d="M160 106 V120 Q160 128 152 128 H28 Q20 128 20 136 V276 Q20 284 28 284 H40"/>
+            <path class="pulse pulse--short" pathLength="1" d="M160 36 V62"/>
+            <path class="pulse pulse--long"  pathLength="1" d="M160 106 V120 Q160 128 152 128 H28 Q20 128 20 136 V164 Q20 172 28 172 H40"/>
+            <path class="pulse pulse--long"  pathLength="1" d="M160 106 V120 Q160 128 152 128 H28 Q20 128 20 136 V220 Q20 228 28 228 H40"/>
+            <path class="pulse pulse--long"  pathLength="1" d="M160 106 V120 Q160 128 152 128 H28 Q20 128 20 136 V276 Q20 284 28 284 H40"/>
+            <g class="node n-lb" style="--d:1.5s">
+              <rect x="85" y="4" width="150" height="32" rx="7"/>
+              <text class="n-title" x="160" y="24.5" text-anchor="middle" data-i18n="infra.lb">balanceador</text>
+              <circle class="n-dot"  cx="223" cy="20" r="3.5" style="--d:2.9s"/>
+              <circle class="n-ring" cx="223" cy="20" r="3.5" style="--d:3.9s"/>
+            </g>
+            <g class="node n-swarm" style="--d:1.95s">
+              <rect x="80" y="62" width="160" height="44" rx="7"/>
+              <text class="n-title" x="160" y="81" text-anchor="middle">docker swarm</text>
+              <text class="n-sub" x="160" y="97" text-anchor="middle" data-i18n="infra.swarm">contenedores</text>
+              <circle class="n-dot"  cx="228" cy="74" r="3.5" style="--d:2.95s"/>
+              <circle class="n-ring" cx="228" cy="74" r="3.5" style="--d:4.4s"/>
+            </g>
+            <g class="node n-azure" style="--d:2.5s">
+              <rect x="40" y="150" width="276" height="44" rx="7"/>
+              <circle class="n-dot"  cx="56" cy="172" r="3.5" style="--d:3s"/>
+              <circle class="n-ring" cx="56" cy="172" r="3.5" style="--d:5.1s"/>
+              <text class="n-title" x="68" y="176.5">azure</text>
+              <text class="n-sub" x="304" y="176" text-anchor="end">vm · mysql</text>
+            </g>
+            <g class="node n-aws" style="--d:2.57s">
+              <rect x="40" y="206" width="276" height="44" rx="7"/>
+              <circle class="n-dot"  cx="56" cy="228" r="3.5" style="--d:3.05s"/>
+              <circle class="n-ring" cx="56" cy="228" r="3.5" style="--d:5.2s"/>
+              <text class="n-title" x="68" y="232.5">aws</text>
+              <text class="n-sub" x="304" y="232" text-anchor="end">ec2 · s3 · ses · ecr</text>
+            </g>
+            <g class="node n-do" style="--d:2.64s">
+              <rect x="40" y="262" width="276" height="44" rx="7"/>
+              <circle class="n-dot"  cx="56" cy="284" r="3.5" style="--d:3.1s"/>
+              <circle class="n-ring" cx="56" cy="284" r="3.5" style="--d:5.3s"/>
+              <text class="n-title" x="68" y="288.5">digitalocean</text>
+              <text class="n-sub" x="304" y="288" text-anchor="end">droplet</text>
+            </g>
+          </svg>
         </div>
-      </div>
-      <div class="skill-row fi d1">
-        <div class="skill-cat">Frontend</div>
-        <div class="skill-tags">
-          <span class="tag tb">HTML5/CSS3</span><span class="tag tb">Tailwind CSS</span>
-          <span class="tag tb">Livewire</span><span class="tag tb">Bootstrap</span>
-          <span class="tag tb">JavaScript</span>
-        </div>
-      </div>
-      <div class="skill-row fi d2">
-        <div class="skill-cat">Mobile</div>
-        <div class="skill-tags">
-          <span class="tag tp">Flutter</span><span class="tag tp">Kotlin</span>
-          <span class="tag tp">Swift</span><span class="tag tp">Java Android</span>
-        </div>
-      </div>
-      <div class="skill-row fi">
-        <div class="skill-cat">DevOps</div>
-        <div class="skill-tags">
-          <span class="tag to">Linux / Ubuntu</span><span class="tag to">Docker</span>
-          <span class="tag to">Docker Swarm</span><span class="tag to">GitHub Actions</span>
-          <span class="tag to">Azure</span><span class="tag to">AWS</span>
-          <span class="tag to">GCP</span><span class="tag to">DigitalOcean</span><span class="tag to">Nginx</span>
-          <span class="tag to">n8n</span><span class="tag to">Proxmox VE</span>
-        </div>
-      </div>
-      <div class="skill-row fi d1">
-        <div class="skill-cat">Databases</div>
-        <div class="skill-tags">
-          <span class="tag ty">MySQL</span><span class="tag ty">PostgreSQL</span><span class="tag ty">MongoDB</span>
-        </div>
+
+        <p class="term-line t-out t-reveal" style="--d:3.3s"><span class="dot" aria-hidden="true"></span><span data-i18n="term.out">plataformas en producción desde 2019</span></p>
+        <p class="term-line t-reveal" style="--d:3.5s"><span class="t-prompt" aria-hidden="true">$</span><span class="cursor" aria-hidden="true"></span></p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ── PROJECTS ── -->
-<section id="projects">
+<section id="projects" class="section" aria-labelledby="projects-title">
   <div class="container">
-    <div class="section-label" data-i18n="nav.projects">projects</div>
-    <h2 class="section-title" data-i18n="projects.title">Proyectos destacados</h2>
-    <div class="projects-grid">
-
-      <a href="https://github.com/Oneago/arcturus-project" target="_blank" rel="noopener" class="project-card fi">
-        <div class="project-header">
-          <div class="project-icon">⚙</div>
-          <div class="project-ext" data-i18n="proj.open">→ open source</div>
-        </div>
-        <div class="project-name">Arcturus Framework</div>
-        <div class="project-desc" data-i18n="proj.arcturus">Framework PHP propio, open source, utilizado en proyectos reales en producción. Base de múltiples plataformas en organizaciones activas en Colombia.</div>
-        <div class="project-stack">
-          <span class="ptag">PHP</span><span class="ptag">Open Source</span><span class="ptag">Framework</span>
-        </div>
-      </a>
-
-      <a href="https://clustersabana.com" target="_blank" rel="noopener" class="project-card fi d1">
-        <div class="project-header">
-          <div class="project-icon">◈</div>
-          <div class="project-ext" data-i18n="proj.prod">→ producción</div>
-        </div>
-        <div class="project-name">Cluster Sabana</div>
-        <div class="project-desc" data-i18n="proj.cluster">Plataforma web para gestión de aliados empresariales con integración a la API de SECOP para consulta automática de licitaciones públicas de Colombia.</div>
-        <div class="project-stack">
-          <span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">SECOP API</span><span class="ptag">Linux</span>
-        </div>
-      </a>
-
-      <a href="https://lovitmatchmaking.com" target="_blank" rel="noopener" class="project-card fi d2">
-        <div class="project-header">
-          <div class="project-icon">◆</div>
-          <div class="project-ext" data-i18n="proj.prod">→ producción</div>
-        </div>
-        <div class="project-name">Lovit Matchmaking</div>
-        <div class="project-desc" data-i18n="proj.lovit">Sitio web corporativo y ERP a la medida para empresa de matchmaking. Sistema integral con módulos de gestión personalizados.</div>
-        <div class="project-stack">
-          <span class="ptag">Laravel</span><span class="ptag">MySQL</span><span class="ptag">Docker</span>
-        </div>
-      </a>
-
-      <a href="https://constructorarupeza.com" target="_blank" rel="noopener" class="project-card fi">
-        <div class="project-header">
-          <div class="project-icon">▲</div>
-          <div class="project-ext" data-i18n="proj.prod">→ producción</div>
-        </div>
-        <div class="project-name">Constructora Rupeza</div>
-        <div class="project-desc" data-i18n="proj.rupeza">Sitio web corporativo para empresa constructora. Diseño responsive y despliegue en servidor Linux con Apache.</div>
-        <div class="project-stack">
-          <span class="ptag">PHP</span><span class="ptag">CSS3</span><span class="ptag">Apache</span>
-        </div>
-      </a>
-
-      <div class="project-card fi d1">
-        <div class="project-header">
-          <div class="project-icon">◉</div>
-          <div class="project-ext">iOS · Android</div>
-        </div>
-        <div class="project-name">Logistics Enterprise</div>
-        <div class="project-desc" data-i18n="proj.logistics">Apps móviles iOS/Android para logística: escaneo de cédulas colombianas (PDF417) para extracción automática de datos, seguimiento de entregas en tiempo real.</div>
-        <div class="project-stack">
-          <span class="ptag">Java</span><span class="ptag">Swift</span><span class="ptag">Flutter</span><span class="ptag">PHP</span><span class="ptag">PDF417</span>
-        </div>
-      </div>
-
-      <div class="project-card fi d2">
-        <div class="project-header">
-          <div class="project-icon">◎</div>
-          <div class="project-ext" data-i18n="proj.social">impacto social</div>
-        </div>
-        <div class="project-name" data-i18n="proj.chatbot.name">Chatbot WhatsApp — Empleo sin Barreras</div>
-        <div class="project-desc" data-i18n="proj.chatbot">Automatización con n8n: atención a beneficiarios, captura de datos y remisión al operador. Campaña segmentada por municipio en Instagram.</div>
-        <div class="project-stack">
-          <span class="ptag">n8n</span><span class="ptag">WhatsApp API</span><span class="ptag">MySQL</span><span class="ptag">Automation</span>
-        </div>
-      </div>
-
-      <div class="project-card fi">
-        <div class="project-header">
-          <div class="project-icon">◇</div>
-          <div class="project-ext" data-i18n="proj.academic">→ académico</div>
-        </div>
-        <div class="project-name" data-i18n="proj.thesis.name">Trabajo de grado — U. Pública en Kennedy</div>
-        <div class="project-desc" data-i18n="proj.thesis">Sistematización de un modelo administrativo para la Universidad Pública en Kennedy. Aplicación web full-stack en contexto institucional público. Mención Meritoria.</div>
-        <div class="project-stack">
-          <span class="ptag">Django</span><span class="ptag">PostgreSQL</span><span class="ptag">Tailwind</span>
-        </div>
-      </div>
-
+    <div class="section-head">
+      <h2 class="section-title" id="projects-title" data-reveal="title" data-i18n="projects.title">Proyectos</h2>
+      <p class="section-note" data-reveal><span class="dot" aria-hidden="true"></span><span data-i18n="projects.note">en producción</span></p>
     </div>
+
+    <div class="featured" data-reveal="stagger">
+      <article class="feature">
+        <span class="status"><span class="ring" aria-hidden="true"></span><span data-i18n="status.oss">open source</span></span>
+        <h3 class="feature-name"><a href="https://github.com/Oneago/arcturus-project" target="_blank" rel="noopener">Arcturus Framework</a></h3>
+        <p class="feature-desc" data-i18n="proj.arcturus">Framework PHP propio y open source, usado en proyectos reales en producción. Sobre él se construyeron clustersabana.com y las primeras plataformas de la Corporación Volver a la Gente.</p>
+        <ul class="chips"><li class="chip">PHP</li><li class="chip">Framework</li><li class="chip">GitHub</li></ul>
+        <div class="feature-foot"><span class="feature-url">github.com/Oneago/arcturus-project</span><span class="arrow" aria-hidden="true">↗</span></div>
+      </article>
+      <article class="feature">
+        <span class="status"><span class="dot" aria-hidden="true"></span><span data-i18n="status.live">en producción</span></span>
+        <h3 class="feature-name"><a href="https://clustersabana.com" target="_blank" rel="noopener">Cluster Sabana</a></h3>
+        <p class="feature-desc" data-i18n="proj.cluster">Plataforma web para gestionar aliados empresariales, con integración a la API de SECOP para consultar licitaciones públicas y un módulo de eventos.</p>
+        <ul class="chips"><li class="chip">PHP · Arcturus</li><li class="chip">MySQL</li><li class="chip">SECOP API</li><li class="chip">Linux</li></ul>
+        <div class="feature-foot"><span class="feature-url">clustersabana.com</span><span class="arrow" aria-hidden="true">↗</span></div>
+      </article>
+    </div>
+
+    <ul class="index" data-reveal="stagger">
+      <li>
+        <a class="index-row" href="https://lovitmatchmaking.com" target="_blank" rel="noopener">
+          <span class="status"><span class="dot" aria-hidden="true"></span><span data-i18n="status.live">en producción</span></span>
+          <span class="index-main">
+            <span class="index-name">Lovit Matchmaking</span>
+            <span class="index-desc" data-i18n="proj.lovit">Sitio web corporativo y ERP a la medida para una empresa de matchmaking.</span>
+            <span class="index-stack">Laravel · MySQL · Docker</span>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <div class="index-row">
+          <span class="status"><span class="dot" aria-hidden="true"></span><span data-i18n="status.live">en producción</span></span>
+          <span class="index-main">
+            <span class="index-name">Logistics Enterprise · iOS / Android</span>
+            <span class="index-desc" data-i18n="proj.logistics">Apps de logística: escaneo de la cédula colombiana (PDF417) para extraer los datos del receptor y seguimiento de paquetes en tiempo real.</span>
+            <span class="index-stack">Java · Swift · Flutter · PHP</span>
+          </span>
+        </div>
+      </li>
+      <li>
+        <a class="index-row" href="https://constructorarupeza.com" target="_blank" rel="noopener">
+          <span class="status"><span class="dot" aria-hidden="true"></span><span data-i18n="status.live">en producción</span></span>
+          <span class="index-main">
+            <span class="index-name">Constructora Rupeza</span>
+            <span class="index-desc" data-i18n="proj.rupeza">Sitio web corporativo para una constructora, desplegado en un servidor Linux con Apache.</span>
+            <span class="index-stack">PHP · CSS · Apache</span>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <div class="index-row">
+          <span class="status"><span class="ring" aria-hidden="true"></span><span data-i18n="status.social">impacto social</span></span>
+          <span class="index-main">
+            <span class="index-name" data-i18n="proj.chatbot.name">Chatbot de WhatsApp: Empleo sin Barreras</span>
+            <span class="index-desc" data-i18n="proj.chatbot">Automatización con n8n que atiende a potenciales beneficiarios, captura sus datos y los remite al operador. Pauta en Instagram segmentada por municipio.</span>
+            <span class="index-stack">n8n · WhatsApp API · MySQL</span>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="index-row">
+          <span class="status"><span class="ring" aria-hidden="true"></span><span data-i18n="status.academic">académico</span></span>
+          <span class="index-main">
+            <span class="index-name" data-i18n="proj.thesis.name">Trabajo de grado: Universidad Pública en Kennedy</span>
+            <span class="index-desc" data-i18n="proj.thesis">Sistematización de un modelo administrativo para la Universidad Pública en Kennedy. Recibió Mención Meritoria del Consejo Académico.</span>
+            <span class="index-stack">Django · PostgreSQL · Tailwind</span>
+          </span>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 
 <!-- ── EXPERIENCE ── -->
-<section id="experience">
+<section id="experience" class="section" aria-labelledby="experience-title">
   <div class="container">
-    <div class="section-label" data-i18n="nav.experience">experience</div>
-    <h2 class="section-title" data-i18n="exp.title">Experiencia</h2>
-    <div class="timeline">
+    <div class="section-head">
+      <h2 class="section-title" id="experience-title" data-reveal="title" data-i18n="exp.title">Experiencia</h2>
+    </div>
+    <ol class="timeline" data-reveal="stagger">
+      <li class="tl-item">
+        <p class="tl-period" data-i18n="exp.partners.period"><time datetime="2023-12">dic 2023</time> – hoy</p>
+        <div class="tl-body">
+          <h3 class="tl-role" data-i18n="exp.partners.role">Líder Área de Sistemas</h3>
+          <p class="tl-org">Corporación Partners Colombia</p>
+          <p class="tl-desc" data-i18n="exp.partners.desc">Diseño y administración de infraestructura multi-cloud distribuida con servicios específicos en Azure, AWS y DigitalOcean. Gestión de Microsoft 365 y Google Workspace para toda la organización. Responsable único del área de sistemas.</p>
+          <ul class="chips"><li class="chip">Azure VM + MySQL</li><li class="chip">AWS EC2 · S3 · SES</li><li class="chip">DigitalOcean</li><li class="chip">WordPress</li><li class="chip">Moodle LMS</li><li class="chip">Microsoft 365</li></ul>
+        </div>
+      </li>
+      <li class="tl-item">
+        <p class="tl-period" data-i18n="exp.vvg.period"><time datetime="2023-02">feb 2023</time> – hoy</p>
+        <div class="tl-body">
+          <h3 class="tl-role" data-i18n="exp.vvg.role">Desarrollador de Plataformas</h3>
+          <p class="tl-org">Corporación Volver a la Gente</p>
+          <p class="tl-desc" data-i18n="exp.vvg.desc">Desarrollo de plataformas para proyectos de impacto social (BIS, OIT, Construye Paz). Clúster Docker Swarm con balanceador de carga en producción. Chatbot de WhatsApp con n8n para Empleo sin Barreras.</p>
+          <ul class="chips"><li class="chip">Laravel</li><li class="chip">Docker Swarm</li><li class="chip">Azure</li><li class="chip">AWS</li><li class="chip">n8n</li><li class="chip">MySQL</li><li class="chip">PostgreSQL</li></ul>
+        </div>
+      </li>
+      <li class="tl-item">
+        <p class="tl-period" data-i18n="exp.freelance.period"><time datetime="2019-10">oct 2019</time> – hoy</p>
+        <div class="tl-body">
+          <h3 class="tl-role" data-i18n="exp.freelance.role">Desarrollador de Software Freelance</h3>
+          <p class="tl-org" data-i18n="exp.freelance.org">Independiente</p>
+          <p class="tl-desc" data-i18n="exp.freelance.desc">Plataformas web, ERPs a la medida y apps móviles iOS y Android para empresas colombianas. Ciclo completo: requisitos, diseño, desarrollo, despliegue y soporte en producción.</p>
+          <ul class="chips"><li class="chip">Laravel</li><li class="chip">Flutter</li><li class="chip">Java · Kotlin · Swift</li><li class="chip">Docker</li><li class="chip">GitHub Actions</li><li class="chip">Linux</li></ul>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
 
-      <div class="tl-item fi">
-        <div class="tl-meta">
-          <span class="tl-period" data-i18n="exp.partners.period">Dic 2023<br>→ Presente</span>
-          <span class="tl-badge" data-i18n="exp.badge">activo</span>
-        </div>
-        <div class="tl-content">
-          <div class="tl-org">Corporación Partners Colombia</div>
-          <div class="tl-role" data-i18n="exp.partners.role">Líder Área de Sistemas</div>
-          <div class="tl-desc" data-i18n="exp.partners.desc">Diseño y administración de infraestructura multi-cloud distribuida con servicios específicos en Azure, AWS y DigitalOcean. Gestión de Microsoft 365 y Google Workspace para toda la organización. Responsable único del área de sistemas.</div>
-          <div class="tl-stack">
-            <span class="stag">Azure VM + MySQL</span><span class="stag">AWS EC2/S3/SES</span>
-            <span class="stag">DigitalOcean</span><span class="stag">WordPress</span>
-            <span class="stag">Moodle LMS</span><span class="stag">Microsoft 365</span>
-          </div>
-        </div>
+<!-- ── SKILLS ── -->
+<section id="skills" class="section" aria-labelledby="skills-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" id="skills-title" data-reveal="title" data-i18n="skills.title">Stack técnico</h2>
+      <p class="section-note" data-reveal><span class="dot" aria-hidden="true"></span><span data-i18n="skills.note">stack principal</span></p>
+    </div>
+    <dl class="stack" data-reveal="stagger">
+      <div class="stack-row">
+        <dt>Backend</dt>
+        <dd><ul class="chips"><li class="chip chip--core">PHP</li><li class="chip chip--core">Laravel</li><li class="chip">Go</li><li class="chip">Java</li><li class="chip">Python</li><li class="chip">Node.js</li><li class="chip">Directus</li></ul></dd>
       </div>
-
-      <div class="tl-item fi d1">
-        <div class="tl-meta">
-          <span class="tl-period" data-i18n="exp.vvg.period">Feb 2023<br>→ Presente</span>
-          <span class="tl-badge" data-i18n="exp.badge">activo</span>
-        </div>
-        <div class="tl-content">
-          <div class="tl-org">Corporación Volver a la Gente</div>
-          <div class="tl-role" data-i18n="exp.vvg.role">Desarrollador de Plataformas</div>
-          <div class="tl-desc" data-i18n="exp.vvg.desc">Desarrollo de plataformas para proyectos de impacto social (BIS, OIT, Construye Paz). Clúster Docker Swarm con balanceador de carga en producción. Chatbot WhatsApp con n8n para Empleo sin Barreras.</div>
-          <div class="tl-stack">
-            <span class="stag">Laravel</span><span class="stag">Docker Swarm</span>
-            <span class="stag">Azure</span><span class="stag">AWS</span>
-            <span class="stag">n8n</span><span class="stag">MySQL</span><span class="stag">PostgreSQL</span>
-          </div>
-        </div>
+      <div class="stack-row">
+        <dt>Frontend</dt>
+        <dd><ul class="chips"><li class="chip">HTML5 / CSS3</li><li class="chip">Tailwind CSS</li><li class="chip">Livewire</li><li class="chip">Bootstrap</li><li class="chip">JavaScript</li></ul></dd>
       </div>
-
-      <div class="tl-item fi d2">
-        <div class="tl-meta">
-          <span class="tl-period" data-i18n="exp.freelance.period">Oct 2019<br>→ Presente</span>
-          <span class="tl-badge" data-i18n="exp.badge">activo</span>
-        </div>
-        <div class="tl-content">
-          <div class="tl-org" data-i18n="exp.freelance.org">Independiente</div>
-          <div class="tl-role" data-i18n="exp.freelance.role">Desarrollador de Software Freelance</div>
-          <div class="tl-desc" data-i18n="exp.freelance.desc">Desarrollo de plataformas web, ERPs a la medida y apps móviles iOS/Android para empresas colombianas. Ciclo completo: levantamiento de requisitos → diseño → desarrollo → despliegue → soporte en producción.</div>
-          <div class="tl-stack">
-            <span class="stag">Laravel</span><span class="stag">Flutter</span>
-            <span class="stag">Java / Kotlin / Swift</span><span class="stag">Docker</span>
-            <span class="stag">GitHub Actions</span><span class="stag">Linux</span>
-          </div>
-        </div>
+      <div class="stack-row">
+        <dt data-i18n="skills.mobile">Móvil</dt>
+        <dd><ul class="chips"><li class="chip chip--core">Flutter</li><li class="chip">Kotlin</li><li class="chip">Swift</li><li class="chip">Java (Android)</li></ul></dd>
       </div>
+      <div class="stack-row">
+        <dt data-i18n="skills.cloud">Nube y DevOps</dt>
+        <dd><ul class="chips"><li class="chip chip--core">Docker</li><li class="chip chip--core">AWS</li><li class="chip chip--core">Azure</li><li class="chip">Docker Swarm</li><li class="chip">Linux / Ubuntu</li><li class="chip">GitHub Actions</li><li class="chip">DigitalOcean</li><li class="chip">GCP</li><li class="chip">Nginx</li><li class="chip">n8n</li><li class="chip">Proxmox VE</li></ul></dd>
+      </div>
+      <div class="stack-row">
+        <dt data-i18n="skills.db">Bases de datos</dt>
+        <dd><ul class="chips"><li class="chip">MySQL</li><li class="chip">PostgreSQL</li><li class="chip">MongoDB</li></ul></dd>
+      </div>
+    </dl>
+  </div>
+</section>
 
+<!-- ── ABOUT ── -->
+<section id="about" class="section" aria-labelledby="about-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title" id="about-title" data-reveal="title" data-i18n="about.title">Sobre mí</h2>
+    </div>
+    <div class="about">
+      <div class="about-text" data-reveal>
+        <p data-i18n="about.p1">Soy <strong>Ingeniero de Sistemas</strong> y llevo más de 7 años desarrollando y operando software en producción para empresas y organizaciones sociales en Colombia.</p>
+        <p data-i18n="about.p2">Trabajo sobre todo en <strong>backend con PHP y Laravel</strong>, apps multiplataforma con <strong>Flutter</strong> e infraestructura en <strong>Azure, AWS y DigitalOcean</strong>: clústeres Docker Swarm con balanceador de carga, CI/CD con GitHub Actions y servidores Linux.</p>
+        <p data-i18n="about.p3">Creé <strong>Arcturus</strong>, un framework PHP open source que uso en producción. También he integrado la API de SECOP, el escaneo de cédulas colombianas (PDF417) y automatizaciones con <strong>n8n</strong>, como un chatbot de WhatsApp para un proyecto de empleo.</p>
+      </div>
+      <dl class="facts" data-reveal="stagger">
+        <div>
+          <dt data-i18n="about.f.edu">Formación</dt>
+          <dd data-i18n="about.f.edu.v">Ingeniero de Sistemas, ETITC (oct. 2026), con Mención Meritoria al trabajo de grado.</dd>
+        </div>
+        <div>
+          <dt data-i18n="about.f.lic">Tarjeta profesional</dt>
+          <dd data-i18n="about.f.lic.v">COPNIA, como Tecnólogo en Desarrollo de Software.</dd>
+        </div>
+        <div>
+          <dt data-i18n="about.f.lang">Idiomas</dt>
+          <dd data-i18n="about.f.lang.v">Español nativo · Inglés A2</dd>
+        </div>
+      </dl>
     </div>
   </div>
 </section>
 
 <!-- ── CONTACT ── -->
-<section id="contact">
+<section id="contact" class="section contact" aria-labelledby="contact-title">
   <div class="container">
-    <div class="contact-inner">
-      <div class="section-label" style="justify-content:center" data-i18n="nav.about">contact</div>
-      <h2 class="section-title fi" style="text-align:center" data-i18n="contact.title">¿Hablamos?</h2>
-      <p class="contact-desc fi d1" data-i18n="contact.desc">Si tienes un proyecto interesante, una oportunidad laboral o simplemente quieres conectar, estoy disponible. Trabajo de forma remota y presencial en Bogotá.</p>
-      <div class="contact-btns fi d2">
-        <a href="mailto:j@juandavid.dev" class="cbtn cbtn-primary">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          j@juandavid.dev
-        </a>
-        <a href="https://github.com/jruedaq" target="_blank" rel="noopener" class="cbtn cbtn-secondary">
-          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/jruedaq" target="_blank" rel="noopener" class="cbtn cbtn-secondary">
-          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-      </div>
+    <h2 class="section-title" id="contact-title" data-reveal="title" data-i18n="contact.title">¿Hablamos?</h2>
+    <p class="contact-desc" data-reveal data-i18n="contact.desc">¿Tienes un proyecto en mente o quieres conversar? Escríbeme y te respondo.</p>
+    <div class="btns" data-reveal="stagger">
+      <a href="mailto:j@juandavid.dev" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        j@juandavid.dev
+      </a>
+      <a href="https://www.linkedin.com/in/jruedaq" target="_blank" rel="me noopener" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/jruedaq" target="_blank" rel="me noopener" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.930 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        GitHub
+      </a>
     </div>
   </div>
 </section>
 
+</main>
+
 <!-- ── FOOTER ── -->
-<footer>
-  <div class="foot-l"><span>Juan David Rueda Quiroga</span> &nbsp;·&nbsp; Bogotá, Colombia &nbsp;·&nbsp; 2026</div>
-  <div class="foot-r">
-    <a href="https://github.com/jruedaq" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://www.linkedin.com/in/jruedaq" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="mailto:j@juandavid.dev">Email</a>
+<footer class="footer">
+  <div class="container">
+    <p>Juan David Rueda Quiroga · Bogotá, Colombia · 2026</p>
+    <nav data-i18n-aria="footer.nav" aria-label="Perfiles">
+      <a href="https://github.com/jruedaq" target="_blank" rel="me noopener" class="uline">GitHub</a>
+      <a href="https://www.linkedin.com/in/jruedaq" target="_blank" rel="me noopener" class="uline">LinkedIn</a>
+      <a href="mailto:j@juandavid.dev" class="uline">Email</a>
+    </nav>
   </div>
 </footer>
 
@@ -686,182 +1057,264 @@
   /* ── TRANSLATIONS ── */
   const i18n = {
     es: {
-      'nav.about':      'about',
-      'nav.skills':     'skills',
-      'nav.projects':   'projects',
-      'nav.experience': 'experience',
-      'nav.contact':    '--contacto',
-      'hero.eyebrow':   '// <span>Bogotá, Colombia</span> — disponible para trabajo remoto',
-      'hero.loc':       'Bogotá, Colombia 🇨🇴 &nbsp;·&nbsp; 7+ años en producción',
-      'about.title':    'Quién soy',
-      'about.p1':       'Soy un <strong>Desarrollador de Software e Ingeniero de Infraestructura en la Nube</strong> con más de 7 años construyendo sistemas que corren en producción — no solo en localhost.',
-      'about.p2':       'Me especializo en <strong>backend con PHP y Laravel</strong>, desarrollo móvil multiplataforma con <strong>Flutter</strong>, y arquitecturas distribuidas sobre <strong>Azure, AWS y DigitalOcean</strong>. He diseñado clústeres Docker Swarm con balanceador de carga, pipelines CI/CD, y plataformas activas que sirven a organizaciones sociales en Colombia.',
-      'about.p3':       'Construí <strong>Arcturus</strong>, un framework PHP propio utilizado en proyectos reales de producción. He integrado automatizaciones con <strong>n8n</strong>, chatbots de WhatsApp, escaneo de cédulas colombianas PDF417, y la API gubernamental de SECOP.',
-      'about.p4':       'Me gradué como <strong>Ingeniero de Sistemas</strong> en la ETITC el 23 de octubre de 2026; mi trabajo de grado recibió <strong>Mención Meritoria</strong> del Consejo Académico. Cuento con <strong>Tarjeta Profesional COPNIA</strong> como Tecnólogo en Desarrollo de Software.',
-      'about.lang.label':    '// idiomas',
-      'about.lang.native':   'Nativo',
-      'about.lang.en':       'A2',
-      'about.stats.label':   '// en números',
-      'about.stats.years':   'años en producción',
-      'about.stats.cloud':   'proveedores cloud',
-      'about.stats.projects':'proyectos activos',
-      'skills.title':   'Stack técnico',
-      'projects.title': 'Proyectos destacados',
-      'proj.open':      '→ open source',
-      'proj.prod':      '→ producción',
-      'proj.social':    'impacto social',
-      'proj.arcturus':  'Framework PHP propio, open source, utilizado en proyectos reales en producción. Base de múltiples plataformas en organizaciones activas en Colombia.',
-      'proj.cluster':   'Plataforma web para gestión de aliados empresariales con integración a la API de SECOP para consulta automática de licitaciones públicas de Colombia.',
-      'proj.lovit':     'Sitio web corporativo y ERP a la medida para empresa de matchmaking. Sistema integral con módulos de gestión personalizados.',
-      'proj.rupeza':    'Sitio web corporativo para empresa constructora. Diseño responsive y despliegue en servidor Linux con Apache.',
-      'proj.logistics': 'Apps móviles iOS/Android para logística: escaneo de cédulas colombianas (PDF417) para extracción automática de datos, seguimiento de entregas en tiempo real.',
-      'proj.chatbot.name': 'Chatbot WhatsApp — Empleo sin Barreras',
-      'proj.chatbot':   'Automatización con n8n: atención a beneficiarios, captura de datos y remisión al operador. Campaña segmentada por municipio en Instagram.',
-      'proj.academic':  '→ académico',
-      'proj.thesis.name': 'Trabajo de grado — U. Pública en Kennedy',
-      'proj.thesis':    'Sistematización de un modelo administrativo para la Universidad Pública en Kennedy. Aplicación web full-stack en contexto institucional público. Mención Meritoria.',
+      'a11y.skip':      'Saltar al contenido',
+      'brand.home':     'juandavid.dev, volver al inicio',
+      'nav.label':      'Principal',
+      'nav.lang':       'Idioma',
+      'nav.menu':       'Menú',
+      'nav.projects':   'proyectos',
+      'nav.experience': 'experiencia',
+      'nav.skills':     'stack',
+      'nav.about':      'sobre mí',
+      'nav.contact':    'contacto',
+      'theme.toLight':  'Cambiar a modo claro',
+      'theme.toDark':   'Cambiar a modo oscuro',
+      'hero.status':    'Bogotá, Colombia · 7+ años en producción',
+      'hero.role':      'Ingeniero de Sistemas. Backend, apps móviles e infraestructura en la nube.',
+      'hero.pitch':     'Construyo y opero plataformas que organizaciones en Colombia usan todos los días: del levantamiento de requisitos al servidor en producción.',
+      'hero.links':     'Perfiles y contacto',
+      'term.state':     'producción',
+      'term.out':       'plataformas en producción desde 2019',
+      'infra.title':    'Mapa de infraestructura',
+      'infra.desc':     'Un balanceador de carga dirige el tráfico a un clúster Docker Swarm, integrado con servicios en Azure (máquina virtual y MySQL), AWS (EC2, S3, SES y ECR) y DigitalOcean (Droplet).',
+      'infra.lb':       'balanceador',
+      'infra.swarm':    'contenedores',
+      'projects.title': 'Proyectos',
+      'projects.note':  'en producción',
+      'status.live':    'en producción',
+      'status.oss':     'open source',
+      'status.social':  'impacto social',
+      'status.academic':'académico',
+      'proj.arcturus':  'Framework PHP propio y open source, usado en proyectos reales en producción. Sobre él se construyeron clustersabana.com y las primeras plataformas de la Corporación Volver a la Gente.',
+      'proj.cluster':   'Plataforma web para gestionar aliados empresariales, con integración a la API de SECOP para consultar licitaciones públicas y un módulo de eventos.',
+      'proj.lovit':     'Sitio web corporativo y ERP a la medida para una empresa de matchmaking.',
+      'proj.logistics': 'Apps de logística: escaneo de la cédula colombiana (PDF417) para extraer los datos del receptor y seguimiento de paquetes en tiempo real.',
+      'proj.rupeza':    'Sitio web corporativo para una constructora, desplegado en un servidor Linux con Apache.',
+      'proj.chatbot.name': 'Chatbot de WhatsApp: Empleo sin Barreras',
+      'proj.chatbot':   'Automatización con n8n que atiende a potenciales beneficiarios, captura sus datos y los remite al operador. Pauta en Instagram segmentada por municipio.',
+      'proj.thesis.name': 'Trabajo de grado: Universidad Pública en Kennedy',
+      'proj.thesis':    'Sistematización de un modelo administrativo para la Universidad Pública en Kennedy. Recibió Mención Meritoria del Consejo Académico.',
       'exp.title':      'Experiencia',
-      'exp.badge':      'activo',
-      'exp.partners.period': 'Dic 2023<br>→ Presente',
+      'exp.partners.period': '<time datetime="2023-12">dic 2023</time> – hoy',
       'exp.partners.role':   'Líder Área de Sistemas',
       'exp.partners.desc':   'Diseño y administración de infraestructura multi-cloud distribuida con servicios específicos en Azure, AWS y DigitalOcean. Gestión de Microsoft 365 y Google Workspace para toda la organización. Responsable único del área de sistemas.',
-      'exp.vvg.period': 'Feb 2023<br>→ Presente',
+      'exp.vvg.period': '<time datetime="2023-02">feb 2023</time> – hoy',
       'exp.vvg.role':   'Desarrollador de Plataformas',
-      'exp.vvg.desc':   'Desarrollo de plataformas para proyectos de impacto social (BIS, OIT, Construye Paz). Clúster Docker Swarm con balanceador de carga en producción. Chatbot WhatsApp con n8n para Empleo sin Barreras.',
-      'exp.freelance.period': 'Oct 2019<br>→ Presente',
+      'exp.vvg.desc':   'Desarrollo de plataformas para proyectos de impacto social (BIS, OIT, Construye Paz). Clúster Docker Swarm con balanceador de carga en producción. Chatbot de WhatsApp con n8n para Empleo sin Barreras.',
+      'exp.freelance.period': '<time datetime="2019-10">oct 2019</time> – hoy',
       'exp.freelance.org':    'Independiente',
       'exp.freelance.role':   'Desarrollador de Software Freelance',
-      'exp.freelance.desc':   'Desarrollo de plataformas web, ERPs a la medida y apps móviles iOS/Android para empresas colombianas. Ciclo completo: levantamiento de requisitos → diseño → desarrollo → despliegue → soporte en producción.',
+      'exp.freelance.desc':   'Plataformas web, ERPs a la medida y apps móviles iOS y Android para empresas colombianas. Ciclo completo: requisitos, diseño, desarrollo, despliegue y soporte en producción.',
+      'skills.title':   'Stack técnico',
+      'skills.note':    'stack principal',
+      'skills.mobile':  'Móvil',
+      'skills.cloud':   'Nube y DevOps',
+      'skills.db':      'Bases de datos',
+      'about.title':    'Sobre mí',
+      'about.p1':       'Soy <strong>Ingeniero de Sistemas</strong> y llevo más de 7 años desarrollando y operando software en producción para empresas y organizaciones sociales en Colombia.',
+      'about.p2':       'Trabajo sobre todo en <strong>backend con PHP y Laravel</strong>, apps multiplataforma con <strong>Flutter</strong> e infraestructura en <strong>Azure, AWS y DigitalOcean</strong>: clústeres Docker Swarm con balanceador de carga, CI/CD con GitHub Actions y servidores Linux.',
+      'about.p3':       'Creé <strong>Arcturus</strong>, un framework PHP open source que uso en producción. También he integrado la API de SECOP, el escaneo de cédulas colombianas (PDF417) y automatizaciones con <strong>n8n</strong>, como un chatbot de WhatsApp para un proyecto de empleo.',
+      'about.f.edu':    'Formación',
+      'about.f.edu.v':  'Ingeniero de Sistemas, ETITC (oct. 2026), con Mención Meritoria al trabajo de grado.',
+      'about.f.lic':    'Tarjeta profesional',
+      'about.f.lic.v':  'COPNIA, como Tecnólogo en Desarrollo de Software.',
+      'about.f.lang':   'Idiomas',
+      'about.f.lang.v': 'Español nativo · Inglés A2',
       'contact.title':  '¿Hablamos?',
-      'contact.desc':   'Si tienes un proyecto interesante, una oportunidad laboral o simplemente quieres conectar, estoy disponible. Trabajo de forma remota y presencial en Bogotá.',
+      'contact.desc':   '¿Tienes un proyecto en mente o quieres conversar? Escríbeme y te respondo.',
+      'footer.nav':     'Perfiles',
     },
     en: {
-      'nav.about':      'about',
-      'nav.skills':     'skills',
+      'a11y.skip':      'Skip to content',
+      'brand.home':     'juandavid.dev, back to top',
+      'nav.label':      'Main',
+      'nav.lang':       'Language',
+      'nav.menu':       'Menu',
       'nav.projects':   'projects',
       'nav.experience': 'experience',
-      'nav.contact':    '--contact',
-      'hero.eyebrow':   '// <span>Bogotá, Colombia</span> — available for remote work',
-      'hero.loc':       'Bogotá, Colombia 🇨🇴 &nbsp;·&nbsp; 7+ years in production',
-      'about.title':    'About me',
-      'about.p1':       'I\'m a <strong>Software Developer and Cloud Infrastructure Engineer</strong> with 7+ years building systems that run in production — not just on localhost.',
-      'about.p2':       'I specialize in <strong>PHP and Laravel backend</strong>, cross-platform mobile development with <strong>Flutter</strong>, and distributed architectures on <strong>Azure, AWS, and DigitalOcean</strong>. I\'ve designed Docker Swarm clusters with load balancers, CI/CD pipelines, and active platforms serving social organizations in Colombia.',
-      'about.p3':       'I built <strong>Arcturus</strong>, a custom PHP framework used in real production projects. I\'ve integrated automations with <strong>n8n</strong>, WhatsApp chatbots, Colombian ID card PDF417 scanning, and the SECOP public procurement API.',
-      'about.p4':       'I graduated as a <strong>Systems Engineer</strong> from ETITC on October 23, 2026; my degree project received a <strong>Meritorious Distinction</strong> from the Academic Council. I hold a <strong>COPNIA Professional License</strong> as a Software Development Technologist.',
-      'about.lang.label':    '// languages',
-      'about.lang.native':   'Native',
-      'about.lang.en':       'A2',
-      'about.stats.label':   '// by the numbers',
-      'about.stats.years':   'years in production',
-      'about.stats.cloud':   'cloud providers',
-      'about.stats.projects':'active projects',
-      'skills.title':   'Tech stack',
-      'projects.title': 'Featured projects',
-      'proj.open':      '→ open source',
-      'proj.prod':      '→ production',
-      'proj.social':    'social impact',
-      'proj.arcturus':  'Custom open source PHP framework used in real production projects. Foundation for multiple platforms across active organizations in Colombia.',
-      'proj.cluster':   'Web platform for managing business partners with SECOP API integration for automatic lookup of Colombian public procurement tenders.',
-      'proj.lovit':     'Corporate website and custom ERP for a matchmaking company. Full management system with tailored modules.',
-      'proj.rupeza':    'Corporate website for a construction company. Responsive design deployed on a Linux server with Apache.',
-      'proj.logistics': 'iOS/Android logistics apps: Colombian ID (PDF417) scanning for automatic data extraction, real-time package delivery tracking.',
-      'proj.chatbot.name': 'WhatsApp Chatbot — Empleo sin Barreras',
-      'proj.chatbot':   'n8n automation: beneficiary intake, data capture and routing to the operator. Instagram campaign segmented by municipality.',
-      'proj.academic':  '→ academic',
-      'proj.thesis.name': 'Degree project — Universidad Pública en Kennedy',
-      'proj.thesis':    'Systematization of an administrative model for the Universidad Pública en Kennedy. Full-stack web application in a public institutional context. Meritorious Distinction.',
+      'nav.skills':     'stack',
+      'nav.about':      'about',
+      'nav.contact':    'contact',
+      'theme.toLight':  'Switch to light mode',
+      'theme.toDark':   'Switch to dark mode',
+      'hero.status':    'Bogotá, Colombia · 7+ years in production',
+      'hero.role':      'Systems Engineer. Backend, mobile apps and cloud infrastructure.',
+      'hero.pitch':     'I build and run platforms that organizations in Colombia use every day, from gathering requirements to the production server.',
+      'hero.links':     'Profiles and contact',
+      'term.state':     'production',
+      'term.out':       'platforms in production since 2019',
+      'infra.title':    'Infrastructure map',
+      'infra.desc':     'A load balancer routes traffic to a Docker Swarm cluster, integrated with services on Azure (virtual machine and MySQL), AWS (EC2, S3, SES and ECR) and DigitalOcean (Droplet).',
+      'infra.lb':       'load balancer',
+      'infra.swarm':    'containers',
+      'projects.title': 'Projects',
+      'projects.note':  'in production',
+      'status.live':    'in production',
+      'status.oss':     'open source',
+      'status.social':  'social impact',
+      'status.academic':'academic',
+      'proj.arcturus':  'My own open source PHP framework, used in real production projects. clustersabana.com and the first Corporación Volver a la Gente platforms were built on it.',
+      'proj.cluster':   'Web platform to manage business partners, with SECOP API integration to look up Colombian public tenders and an events module.',
+      'proj.lovit':     'Corporate website and custom ERP for a matchmaking company.',
+      'proj.logistics': 'Logistics apps: Colombian ID (PDF417) scanning to capture the recipient\'s data and real-time package tracking.',
+      'proj.rupeza':    'Corporate website for a construction company, deployed on a Linux server with Apache.',
+      'proj.chatbot.name': 'WhatsApp chatbot: Empleo sin Barreras',
+      'proj.chatbot':   'n8n automation that answers prospective beneficiaries, captures their data and routes them to the operator. Instagram ads segmented by municipality.',
+      'proj.thesis.name': 'Degree project: Universidad Pública en Kennedy',
+      'proj.thesis':    'Systematization of an administrative model for the Universidad Pública en Kennedy. Awarded a Meritorious Distinction by the Academic Council.',
       'exp.title':      'Experience',
-      'exp.badge':      'active',
-      'exp.partners.period': 'Dec 2023<br>→ Present',
+      'exp.partners.period': '<time datetime="2023-12">Dec 2023</time> – present',
       'exp.partners.role':   'Systems Department Lead',
-      'exp.partners.desc':   'Design and administration of distributed multi-cloud infrastructure with dedicated services on Azure, AWS, and DigitalOcean. Microsoft 365 and Google Workspace management for the entire organization. Sole owner of the systems department.',
-      'exp.vvg.period': 'Feb 2023<br>→ Present',
+      'exp.partners.desc':   'Design and administration of distributed multi-cloud infrastructure with dedicated services on Azure, AWS and DigitalOcean. Microsoft 365 and Google Workspace management for the entire organization. Sole owner of the systems department.',
+      'exp.vvg.period': '<time datetime="2023-02">Feb 2023</time> – present',
       'exp.vvg.role':   'Platform Developer',
-      'exp.vvg.desc':   'Platform development for social impact projects (BIS, OIT, Construye Paz). Production Docker Swarm cluster with load balancer. WhatsApp chatbot with n8n for the Empleo sin Barreras project.',
-      'exp.freelance.period': 'Oct 2019<br>→ Present',
+      'exp.vvg.desc':   'Platform development for social impact projects (BIS, OIT, Construye Paz). Production Docker Swarm cluster with a load balancer. WhatsApp chatbot with n8n for the Empleo sin Barreras project.',
+      'exp.freelance.period': '<time datetime="2019-10">Oct 2019</time> – present',
       'exp.freelance.org':    'Independent',
       'exp.freelance.role':   'Freelance Software Developer',
-      'exp.freelance.desc':   'Web platforms, custom ERPs, and iOS/Android mobile apps for Colombian companies. Full cycle: requirements gathering → design → development → production deployment → ongoing support.',
+      'exp.freelance.desc':   'Web platforms, custom ERPs and iOS and Android apps for Colombian companies. Full cycle: requirements, design, development, deployment and production support.',
+      'skills.title':   'Tech stack',
+      'skills.note':    'core stack',
+      'skills.mobile':  'Mobile',
+      'skills.cloud':   'Cloud & DevOps',
+      'skills.db':      'Databases',
+      'about.title':    'About me',
+      'about.p1':       'I\'m a <strong>Systems Engineer</strong> with 7+ years building and running production software for companies and social organizations in Colombia.',
+      'about.p2':       'Most of my work is <strong>PHP and Laravel backend</strong>, cross-platform apps with <strong>Flutter</strong> and infrastructure on <strong>Azure, AWS and DigitalOcean</strong>: Docker Swarm clusters behind a load balancer, CI/CD with GitHub Actions and Linux servers.',
+      'about.p3':       'I built <strong>Arcturus</strong>, an open source PHP framework I use in production. I\'ve also integrated the SECOP public procurement API, Colombian ID (PDF417) scanning and <strong>n8n</strong> automations, including a WhatsApp chatbot for an employment project.',
+      'about.f.edu':    'Education',
+      'about.f.edu.v':  'Systems Engineer, ETITC (Oct 2026), with a Meritorious Distinction for my degree project.',
+      'about.f.lic':    'Professional license',
+      'about.f.lic.v':  'COPNIA, as a Software Development Technologist.',
+      'about.f.lang':   'Languages',
+      'about.f.lang.v': 'Spanish (native) · English (A2)',
       'contact.title':  'Let\'s talk',
-      'contact.desc':   'If you have an interesting project, a job opportunity, or just want to connect — I\'m available. I work remotely and on-site in Bogotá.',
+      'contact.desc':   'Got a project in mind or just want to talk? Write to me and I\'ll get back to you.',
+      'footer.nav':     'Profiles',
     }
   };
 
-  let currentLang = localStorage.getItem('lang') || 'es';
+  const root = document.documentElement;
+  const motionOK = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+  let currentLang = 'es';
+  try { currentLang = localStorage.getItem('lang') || 'es'; } catch (e) {}
+  if (!i18n[currentLang]) currentLang = 'es';
 
-  function setLang(lang) {
-    currentLang = lang;
-    document.documentElement.lang = lang;
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (i18n[lang][key] !== undefined) el.innerHTML = i18n[lang][key];
-    });
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
-    localStorage.setItem('lang', lang);
+  /* ── THEME ── */
+  const themeBtn = document.getElementById('theme-btn');
+  const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function activeTheme() {
+    return root.dataset.theme || (darkQuery.matches ? 'dark' : 'light');
   }
 
-  // Apply on load before first paint
-  setLang(currentLang);
+  function syncThemeButton() {
+    const next = activeTheme() === 'dark' ? 'light' : 'dark';
+    themeBtn.dataset.next = next;
+    themeBtn.setAttribute('aria-label', i18n[currentLang][next === 'light' ? 'theme.toLight' : 'theme.toDark']);
+  }
 
-  /* ── TERMINAL TYPEWRITER ── */
-  (function() {
-    const typingEl  = document.getElementById('t-typing');
-    const cursor1   = document.getElementById('t-cursor1');
-    const outputEl  = document.getElementById('t-output');
-    const prompt2El = document.getElementById('t-prompt2');
-    const cmd = 'whoami';
-    let i = 0;
+  function toggleTheme() {
+    const next = activeTheme() === 'dark' ? 'light' : 'dark';
+    const apply = () => {
+      root.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      syncThemeButton();
+    };
+    if (!motionOK || !document.startViewTransition) { apply(); return; }
 
-    function typeChar() {
-      if (i < cmd.length) {
-        typingEl.textContent += cmd[i++];
-        setTimeout(typeChar, 70 + Math.random() * 55);
-      } else {
-        setTimeout(() => {
-          cursor1.style.display = 'none';
-          outputEl.style.visibility = 'visible';
-          ['tl-1','tl-2'].forEach((id, idx) => {
-            const el = document.getElementById(id);
-            el.style.opacity = '0'; el.style.transition = 'opacity .25s';
-            setTimeout(() => { el.style.opacity = '1'; }, idx * 130);
-          });
-          // also fade the t-name (first child)
-          const tname = outputEl.querySelector('.t-name');
-          tname.style.opacity = '0'; tname.style.transition = 'opacity .25s';
-          setTimeout(() => { tname.style.opacity = '1'; }, 0);
+    // El tema nuevo se expande en círculo desde el botón
+    const r = themeBtn.getBoundingClientRect();
+    const x = r.left + r.width / 2, y = r.top + r.height / 2;
+    const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+    root.dataset.vt = 'theme';
+    const transition = document.startViewTransition(apply);
+    transition.ready.then(() => {
+      root.animate(
+        { clipPath: [`circle(0 at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`] },
+        { duration: 700, easing: 'cubic-bezier(.25, 1, .5, 1)', pseudoElement: '::view-transition-new(root)' }
+      );
+    });
+    transition.finished.finally(() => { delete root.dataset.vt; });
+  }
 
-          setTimeout(() => { prompt2El.style.visibility = 'visible'; }, 2 * 130 + 180);
-        }, 380);
-      }
-    }
-    setTimeout(typeChar, 900);
-  })();
+  themeBtn.addEventListener('click', toggleTheme);
+  darkQuery.addEventListener('change', syncThemeButton);
+
+  /* ── LANGUAGE ── */
+  function applyLang(lang) {
+    currentLang = lang;
+    root.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const value = i18n[lang][el.getAttribute('data-i18n')];
+      if (value !== undefined) el.innerHTML = value;
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+      const value = i18n[lang][el.getAttribute('data-i18n-aria')];
+      if (value !== undefined) el.setAttribute('aria-label', value);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang));
+    });
+    syncThemeButton();
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+
+  function setLang(lang) {
+    if (lang === currentLang) return;
+    // Fundido corto entre idiomas cuando el navegador lo permite
+    if (motionOK && document.startViewTransition) document.startViewTransition(() => applyLang(lang));
+    else applyLang(lang);
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => setLang(btn.dataset.lang));
+  });
+  applyLang(currentLang);
 
   /* ── NAV ── */
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  }, { passive: true });
+  const navLinks = document.getElementById('navlinks');
+  const hamburger = document.getElementById('hamburger');
 
-  /* ── SCROLL ANIMATIONS ── */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fi').forEach(el => observer.observe(el));
+  function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 24); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-  /* ── MOBILE NAV ── */
-  function toggleNav() {
-    const links = document.getElementById('navlinks');
-    links.classList.toggle('open');
+  function setMenu(open) {
+    navLinks.classList.toggle('open', open);
+    nav.classList.toggle('menu-open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
   }
-  document.querySelectorAll('#navlinks a').forEach(a => {
-    a.addEventListener('click', () => document.getElementById('navlinks').classList.remove('open'));
-  });
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) document.getElementById('navlinks').classList.remove('open');
-  });
+  hamburger.addEventListener('click', () => setMenu(!navLinks.classList.contains('open')));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 860) setMenu(false); });
+
+  /* ── REVEAL ON SCROLL ── */
+  // Solo se oculta lo que al cargar está debajo del pliegue: sin JS o con
+  // movimiento reducido todo queda visible desde el principio.
+  if (motionOK && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.15 });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) return;
+      if (el.dataset.reveal === 'stagger') {
+        [...el.children].forEach((child, i) => {
+          child.style.setProperty('--i', i);
+          child.querySelectorAll('.chip').forEach((chip, j) => chip.style.setProperty('--j', j));
+        });
+      }
+      el.classList.add('pending');
+      observer.observe(el);
+    });
+  }
 </script>
 </body>
 </html>
