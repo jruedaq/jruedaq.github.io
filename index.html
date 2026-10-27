@@ -471,24 +471,8 @@
     .status { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-mono); font-size: .72rem; color: var(--ink-3); }
 
     /* ── PROJECTS ── */
-    .featured { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem; }
-    .feature {
-      position: relative; display: flex; flex-direction: column; gap: .9rem;
-      padding: clamp(1.4rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
-      transition: border-color .3s var(--ease-out), transform .3s var(--ease-out);
-    }
-    .feature:hover { border-color: color-mix(in oklch, var(--accent) 45%, var(--line)); transform: translateY(-3px); }
-    .feature:has(a:focus-visible) { outline: 2px solid var(--accent); outline-offset: 3px; }
-    .feature-name { font-family: var(--font-mono); font-size: clamp(1.25rem, 1.1rem + .6vw, 1.6rem); font-weight: 600; line-height: 1.2; letter-spacing: -.02em; }
-    .feature-name a { text-decoration: none; }
-    .feature-name a:focus-visible { outline: none; }
-    .feature-name a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
-    .feature-desc { color: var(--ink-2); text-wrap: pretty; }
-    .feature-foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto; padding-top: .4rem; }
-    .feature-url { font-family: var(--font-mono); font-size: .75rem; color: var(--ink-3); transition: color .2s; }
-    .feature:hover .feature-url { color: var(--accent); }
     .arrow { font-family: var(--font-mono); color: var(--ink-3); transition: transform .3s var(--ease-out), color .2s; }
-    .feature:hover .arrow, a.index-row:hover .arrow, a.index-row:focus-visible .arrow { color: var(--accent); transform: translate(3px, -3px); }
+    a.index-row:hover .arrow, a.index-row:focus-visible .arrow { color: var(--accent); transform: translate(3px, -3px); }
 
     .index { list-style: none; border-top: 1px solid var(--line); }
     .index-row {
@@ -644,7 +628,7 @@
       html:not(.js) .hamburger { display: none; }
     }
     @media (max-width: 760px) {
-      .featured, .about { grid-template-columns: minmax(0, 1fr); }
+      .about { grid-template-columns: minmax(0, 1fr); }
       .tl-item, .stack-row { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
       .tl-period, .stack-row dt { padding-top: 0; }
       .index-row { grid-template-columns: minmax(0, 1fr) 1.5rem; padding-inline: .25rem; }
@@ -777,24 +761,29 @@
       <p class="section-note" data-reveal><span class="dot" aria-hidden="true"></span><span data-i18n="projects.note">en producción</span></p>
     </div>
 
-    <div class="featured" data-reveal="stagger">
-      <article class="feature">
-        <span class="status"><span class="ring" aria-hidden="true"></span><span data-i18n="status.oss">open source</span></span>
-        <h3 class="feature-name"><a href="https://github.com/Oneago/arcturus-project" target="_blank" rel="noopener">Arcturus Framework</a></h3>
-        <p class="feature-desc" data-i18n="proj.arcturus">Framework PHP propio y open source, usado en proyectos reales en producción. Sobre él se construyeron clustersabana.com y las primeras plataformas de la Corporación Volver a la Gente.</p>
-        <ul class="chips"><li class="chip">PHP</li><li class="chip">Framework</li><li class="chip">GitHub</li></ul>
-        <div class="feature-foot"><span class="feature-url">github.com/Oneago/arcturus-project</span><span class="arrow" aria-hidden="true">↗</span></div>
-      </article>
-      <article class="feature">
-        <span class="status"><span class="dot" aria-hidden="true"></span><span data-i18n="status.live">en producción</span></span>
-        <h3 class="feature-name"><a href="https://clustersabana.com" target="_blank" rel="noopener">Cluster Sabana</a></h3>
-        <p class="feature-desc" data-i18n="proj.cluster">Plataforma web para gestionar aliados empresariales, con integración a la API de SECOP para consultar licitaciones públicas y un módulo de eventos.</p>
-        <ul class="chips"><li class="chip">PHP · Arcturus</li><li class="chip">MySQL</li><li class="chip">SECOP API</li><li class="chip">Linux</li></ul>
-        <div class="feature-foot"><span class="feature-url">clustersabana.com</span><span class="arrow" aria-hidden="true">↗</span></div>
-      </article>
-    </div>
-
     <ul class="index" data-reveal="stagger">
+      <li>
+        <a class="index-row" href="https://github.com/Oneago/arcturus-project" target="_blank" rel="noopener">
+          <span class="status"><span class="ring" aria-hidden="true"></span><span data-i18n="status.oss">open source</span></span>
+          <span class="index-main">
+            <span class="index-name">Arcturus Framework</span>
+            <span class="index-desc" data-i18n="proj.arcturus">Framework PHP propio y open source, usado en proyectos reales en producción. Sobre él se construyeron clustersabana.com y las primeras plataformas de la Corporación Volver a la Gente.</span>
+            <span class="index-stack">PHP · Framework · GitHub</span>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="https://clustersabana.com" target="_blank" rel="noopener">
+          <span class="status"><span class="dot" aria-hidden="true"></span><span data-i18n="status.live">en producción</span></span>
+          <span class="index-main">
+            <span class="index-name">Cluster Sabana</span>
+            <span class="index-desc" data-i18n="proj.cluster">Plataforma web para gestionar aliados empresariales, con integración a la API de SECOP para consultar licitaciones públicas y un módulo de eventos.</span>
+            <span class="index-stack">PHP · Arcturus · MySQL · SECOP API · Linux</span>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
       <li>
         <a class="index-row" href="https://lovitmatchmaking.com" target="_blank" rel="noopener">
           <span class="status"><span class="dot" aria-hidden="true"></span><span data-i18n="status.live">en producción</span></span>
